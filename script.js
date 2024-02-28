@@ -279,4 +279,32 @@
 // console.log(filter_list([1,2,'aasf','1','123',123])) //[1,2,123]
 
 
+// Given 2 string parameters, show a concatenation of:
+// the reverse of the 2nd string with inverted case; e.g Fish -> HSIf
+// a separator in between both strings: @@@
+// the 1st string reversed with inverted case and then mirrored; e.g Water -> RETAwwATER
+// function reverseAndMirror(s1,s2) {
+//   let reverseS2 = '';
+//   let reverseS1 = '';
+//   for (let i = (s2.length - 1); i >= 0; i--) {
+//     if (s2[i] === s2[i].toUpperCase()) {
+//       reverseS2 += s2[i].toLowerCase();
+//     } else {
+//       reverseS2 += s2[i].toUpperCase();
+//     }
+//   }
 
+//   for (let i = (s1.length - 1); i >= 0; i--) {
+//     if (s1[i] === s1[i].toUpperCase()) {
+//       reverseS1 += s1[i].toLowerCase();
+//     } else {
+//       reverseS1 += s1[i].toUpperCase();
+//     }
+//   }
+
+//   return `${reverseS2}@@@${reverseS1}${reverseS1.split('').reverse().join('')}`;
+// }
+
+
+// console.log(reverseAndMirror("FizZ", "buZZ")) //"zzUB@@@zZIffIZz"
+// console.log(reverseAndMirror("String Reversing", "Changing Case")) //"ESAc GNIGNAHc@@@GNISREVEr GNIRTssTRING rEVERSING"
