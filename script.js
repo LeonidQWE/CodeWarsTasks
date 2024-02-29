@@ -5,13 +5,13 @@
 //   return number * Math.pow(5, lenthOfNumber.length)
 // }
 
-
 // multiply(3) //== 15 # 3 * 5¹
 // multiply(10) //== 250 # 10 * 5²
 // multiply(200) //== 25000 # 200 * 5³
 // multiply(0) //== 0 # 0 * 5¹
 // multiply(-3) //== -15 # -3 * 5¹
 
+// -----------------------------------------------------------------------
 
 // Create a function that returns the CSV representation of a two-dimensional numeric array.
 // function toCsvText(array) {
@@ -32,6 +32,7 @@
 //  ])
 //'-25,21,2,-33,48\n30,31,-32,33,-34');
 
+// ---------------------------------------------------------------------------
 
 // Sum all the numbers of a given array ( cq. list ), except the highest and the lowest element ( by value, not by index! ).
 // The highest or lowest element respectively is a single element at each edge, even if there are more than one with the same value.
@@ -63,6 +64,7 @@
 // sumArray([ -6, -20, -1, -10, -12 ]) //-28
 // sumArray([ -6, 20, -1, 10, -12 ]) //3
 
+// ---------------------------------------------------------------------------
 
 // Весокосный год
 // function yearDays(year)
@@ -85,6 +87,7 @@
 // yearDays(666) //'666 has 365 days'
 // yearDays(1857) //'1857 has 365 days'
 
+// ---------------------------------------------------------------------------
 
 // // Create a function that always returns True/true for every item in a given list.
 // // However, if an element is the word 'flick', switch to always returning the opposite boolean value.
@@ -115,6 +118,7 @@
 // flickSwitch(["flick"])// [false]
 // flickSwitch([])// []
 
+// ---------------------------------------------------------------------------
 
 // You're at the zoo... all the meerkats look weird. Something has gone terribly wrong - someone has gone and switched their heads and tails around!
 // Save the animals by switching them back. You will be given an array which will have three values (tail, body, head). It is your job to re-arrange the array so that the animal is the right way round (head, body, tail).
@@ -130,6 +134,7 @@
 // fixTheMeerkat(["lower legs", "torso", "upper legs"]) // ["upper legs", "torso", "lower legs"];
 // fixTheMeerkat(["ground", "rainbow", "sky"]) // ["sky", "rainbow", "ground"];
 
+// ---------------------------------------------------------------------------
 
 // // Given a set of numbers, return the additive inverse of each. Each positive becomes negatives, and the negatives become positives.
 // function invert(array) {
@@ -141,6 +146,7 @@
 // invert([]) // [];
 // invert([0]) // [0];
 
+// ---------------------------------------------------------------------------
 
 // We need a function that can transform a string into a number. What ways of achieving this do you know?
 // Note: Don't worry, all inputs will be strings, and every string is a perfectly valid representation of an integral number.
@@ -159,6 +165,7 @@
 // stringToNumber("-7") //  -7
 // stringToNumber("asd") //  -7
 
+// ---------------------------------------------------------------------------
 
 // You are given two vectors starting from the origin (x=0, y=0) with coordinates (x1,y1) and (x2,y2). Your task is to find out if these vectors are collinear. Collinear vectors are vectors that lie on the same straight line. They can be directed in the same or opposite directions. One vector can be obtained from another by multiplying it by a certain number. In terms of coordinates, vectors (x1, y1) and (x2, y2) are collinear if (x1, y1) = (k*x2, k*y2) , where k is any number acting as a coefficient.
 // function collinearity( x1,y1, x2,y2 ) {
@@ -177,7 +184,7 @@
 // collinearity( 0,0, 1,0 )// true,
 // collinearity( 5,7, 0,0 )// true,
 
-
+// ---------------------------------------------------------------------------
 
 // Switzerland has four official languages: German, French, Italian, and Romansh.
 // When native speakers of one or more of these languages meet, they follow certain regulations to choose a language for the group. Here are the rules for groups of exactly three people:
@@ -206,6 +213,7 @@
 // console.log(trilingualDemocracy("IIK")) //"K"
 // console.log(trilingualDemocracy("DFK")) //"I"
 
+// ---------------------------------------------------------------------------
 
 // Write a function partlist that gives all the ways to divide a list (an array) of at least two elements into two non-empty parts.
 // Each two non empty parts will be in a pair (or an array for languages without tuples or a structin C - C: see Examples test Cases - )
@@ -224,6 +232,7 @@
 // console.log(partlist(["cdIw", "tzIy", "xDu", "rThG"])) //[["cdIw", "tzIy xDu rThG"], ["cdIw tzIy", "xDu rThG"], ["cdIw tzIy xDu", "rThG"]]
 // console.log(partlist(["vJQ", "anj", "mQDq", "sOZ"])) //[["vJQ", "anj mQDq sOZ"], ["vJQ anj", "mQDq sOZ"], ["vJQ anj mQDq", "sOZ"]]
 
+// ---------------------------------------------------------------------------
 
 // A non-empty array a of length n is called an array of all possibilities if it contains all numbers between 0 and a.length - 1 (both inclusive).
 // Write a function that accepts an integer array and returns true if the array is an array of all possibilities, else false.
@@ -244,6 +253,7 @@
 // console.log(isAllPossibilities([0])) //true
 // console.log(isAllPossibilities([7,3,5,0,3,2,4,6,1])) //false
 
+// ---------------------------------------------------------------------------
 
 // I have four positive integers, A, B, C and D, where A < B < C < D. The input is a list of the integers A, B, C, D, AxB, BxC, CxD, DxA in some order. Your task is to return the value of D.
 // function alphabet(ns) {
@@ -267,6 +277,7 @@
 // console.log(alphabet([20,30,6,7,4,42,28,5])) //7
 // console.log(alphabet([39,37,6,13,3,2,481,74])) //37
 
+// ---------------------------------------------------------------------------
 
 // In this kata you will create a function that takes a list of non-negative integers and strings and returns a new list with the strings filtered out.
 
@@ -278,6 +289,7 @@
 // console.log(filter_list([1,'a','b',0,15])) //[1,0,15]
 // console.log(filter_list([1,2,'aasf','1','123',123])) //[1,2,123]
 
+// ---------------------------------------------------------------------------
 
 // Given 2 string parameters, show a concatenation of:
 // the reverse of the 2nd string with inverted case; e.g Fish -> HSIf
