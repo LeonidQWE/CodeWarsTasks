@@ -348,6 +348,161 @@
 // console.log(naughtyOrNice({"January": {"1": "Nice", "2": "Nice", "3": "Nice", "4": "Naughty", "5": "Nice", "6": "Naughty", "7": "Nice", "8": "Naughty", "9": "Nice", "10": "Nice", "11": "Nice", "12": "Naughty", "13": "Nice", "14": "Nice", "15": "Naughty", "16": "Naughty", "17": "Naughty", "18": "Naughty", "19": "Nice", "20": "Nice", "21": "Nice", "22": "Nice", "23": "Nice", "24": "Nice", "25": "Nice", "26": "Nice", "27": "Naughty", "28": "Naughty", "29": "Nice", "30": "Nice", "31": "Naughty"}, "February": {"1": "Nice", "2": "Naughty", "3": "Nice", "4": "Naughty", "5": "Nice", "6": "Nice", "7": "Nice", "8": "Naughty", "9": "Naughty", "10": "Naughty", "11": "Nice", "12": "Nice", "13": "Nice", "14": "Nice", "15": "Nice", "16": "Naughty", "17": "Nice", "18": "Naughty", "19": "Nice", "20": "Nice", "21": "Nice", "22": "Naughty", "23": "Naughty", "24": "Nice", "25": "Naughty", "26": "Nice", "27": "Nice", "28": "Naughty"}, "March": {"1": "Nice", "2": "Nice", "3": "Nice", "4": "Naughty", "5": "Nice", "6": "Naughty", "7": "Naughty", "8": "Nice", "9": "Nice", "10": "Naughty", "11": "Nice", "12": "Nice", "13": "Nice", "14": "Naughty", "15": "Naughty", "16": "Naughty", "17": "Naughty", "18": "Nice", "19": "Naughty", "20": "Naughty", "21": "Nice", "22": "Nice", "23": "Nice", "24": "Nice", "25": "Nice", "26": "Nice", "27": "Naughty", "28": "Nice", "29": "Nice", "30": "Naughty", "31": "Naughty"}, "April": {"1": "Nice", "2": "Nice", "3": "Nice", "4": "Naughty", "5": "Naughty", "6": "Nice", "7": "Nice", "8": "Naughty", "9": "Naughty", "10": "Naughty", "11": "Nice", "12": "Nice", "13": "Nice", "14": "Nice", "15": "Nice", "16": "Naughty", "17": "Naughty", "18": "Naughty", "19": "Nice", "20": "Nice", "21": "Nice", "22": "Naughty", "23": "Nice", "24": "Naughty", "25": "Naughty", "26": "Nice", "27": "Nice", "28": "Naughty", "29": "Naughty", "30": "Nice"}, "May": {"1": "Nice", "2": "Naughty", "3": "Nice", "4": "Nice", "5": "Nice", "6": "Nice", "7": "Nice", "8": "Nice", "9": "Nice", "10": "Nice", "11": "Naughty", "12": "Nice", "13": "Naughty", "14": "Naughty", "15": "Naughty", "16": "Naughty", "17": "Naughty", "18": "Nice", "19": "Nice", "20": "Nice", "21": "Nice", "22": "Naughty", "23": "Naughty", "24": "Naughty", "25": "Naughty", "26": "Nice", "27": "Naughty", "28": "Naughty", "29": "Nice", "30": "Nice", "31": "Naughty"}, "June": {"1": "Nice", "2": "Nice", "3": "Nice", "4": "Naughty", "5": "Nice", "6": "Nice", "7": "Naughty", "8": "Nice", "9": "Nice", "10": "Nice", "11": "Nice", "12": "Naughty", "13": "Naughty", "14": "Nice", "15": "Naughty", "16": "Nice", "17": "Nice", "18": "Nice", "19": "Nice", "20": "Naughty", "21": "Nice", "22": "Naughty", "23": "Nice", "24": "Naughty", "25": "Naughty", "26": "Naughty", "27": "Nice", "28": "Nice", "29": "Naughty", "30": "Naughty"}, "July": {"1": "Nice", "2": "Nice", "3": "Nice", "4": "Naughty", "5": "Naughty", "6": "Naughty", "7": "Naughty", "8": "Naughty", "9": "Naughty", "10": "Naughty", "11": "Naughty", "12": "Naughty", "13": "Naughty", "14": "Naughty", "15": "Nice", "16": "Nice", "17": "Naughty", "18": "Nice", "19": "Nice", "20": "Nice", "21": "Nice", "22": "Naughty", "23": "Nice", "24": "Naughty", "25": "Nice", "26": "Naughty", "27": "Nice", "28": "Nice", "29": "Nice", "30": "Nice", "31": "Naughty"}, "August": {"1": "Naughty", "2": "Naughty", "3": "Naughty", "4": "Naughty", "5": "Naughty", "6": "Nice", "7": "Nice", "8": "Naughty", "9": "Nice", "10": "Naughty", "11": "Naughty", "12": "Naughty", "13": "Nice", "14": "Naughty", "15": "Naughty", "16": "Nice", "17": "Naughty", "18": "Nice", "19": "Nice", "20": "Nice", "21": "Nice", "22": "Nice", "23": "Naughty", "24": "Nice", "25": "Nice", "26": "Naughty", "27": "Nice", "28": "Naughty", "29": "Nice", "30": "Nice", "31": "Nice"}, "September": {"1": "Naughty", "2": "Naughty", "3": "Nice", "4": "Naughty", "5": "Naughty", "6": "Naughty", "7": "Naughty", "8": "Naughty", "9": "Naughty", "10": "Naughty", "11": "Nice", "12": "Naughty", "13": "Naughty", "14": "Nice", "15": "Naughty", "16": "Naughty", "17": "Nice", "18": "Nice", "19": "Naughty", "20": "Naughty", "21": "Nice", "22": "Naughty", "23": "Naughty", "24": "Naughty", "25": "Naughty", "26": "Naughty", "27": "Naughty", "28": "Nice", "29": "Nice", "30": "Nice"}, "October": {"1": "Naughty", "2": "Naughty", "3": "Nice", "4": "Naughty", "5": "Nice", "6": "Nice", "7": "Nice", "8": "Nice", "9": "Nice", "10": "Naughty", "11": "Nice", "12": "Nice", "13": "Nice", "14": "Naughty", "15": "Naughty", "16": "Nice", "17": "Nice", "18": "Nice", "19": "Naughty", "20": "Naughty", "21": "Nice", "22": "Nice", "23": "Naughty", "24": "Nice", "25": "Nice", "26": "Naughty", "27": "Naughty", "28": "Nice", "29": "Nice", "30": "Naughty", "31": "Naughty"}, "November": {"1": "Nice", "2": "Nice", "3": "Nice", "4": "Nice", "5": "Nice", "6": "Nice", "7": "Nice", "8": "Nice", "9": "Nice", "10": "Naughty", "11": "Nice", "12": "Nice", "13": "Naughty", "14": "Nice", "15": "Nice", "16": "Naughty", "17": "Naughty", "18": "Nice", "19": "Nice", "20": "Naughty", "21": "Nice", "22": "Naughty", "23": "Nice", "24": "Naughty", "25": "Naughty", "26": "Naughty", "27": "Naughty", "28": "Nice", "29": "Naughty", "30": "Naughty"}, "December": {"1": "Nice", "2": "Nice", "3": "Nice", "4": "Naughty", "5": "Naughty", "6": "Naughty", "7": "Nice", "8": "Naughty", "9": "Naughty", "10": "Naughty", "11": "Naughty", "12": "Nice", "13": "Naughty", "14": "Naughty", "15": "Naughty", "16": "Nice", "17": "Nice", "18": "Nice", "19": "Naughty", "20": "Nice", "21": "Nice", "22": "Nice", "23": "Naughty", "24": "Nice", "25": "Naughty", "26": "Naughty", "27": "Naughty", "28": "Naughty", "29": "Nice", "30": "Naughty", "31": "Naughty"}})) //"Nice!"
 // console.log(naughtyOrNice({"January": {"1": "Nice", "2": "Nice", "3": "Nice", "4": "Naughty", "5": "Naughty", "6": "Naughty", "7": "Naughty", "8": "Nice", "9": "Nice", "10": "Naughty", "11": "Nice", "12": "Nice", "13": "Nice", "14": "Naughty", "15": "Nice", "16": "Naughty", "17": "Naughty", "18": "Nice", "19": "Naughty", "20": "Naughty", "21": "Naughty", "22": "Naughty", "23": "Nice", "24": "Naughty", "25": "Naughty", "26": "Naughty", "27": "Naughty", "28": "Naughty", "29": "Naughty", "30": "Nice", "31": "Naughty"}, "February": {"1": "Naughty", "2": "Nice", "3": "Naughty", "4": "Naughty", "5": "Nice", "6": "Nice", "7": "Naughty", "8": "Nice", "9": "Naughty", "10": "Naughty", "11": "Nice", "12": "Nice", "13": "Naughty", "14": "Naughty", "15": "Nice", "16": "Naughty", "17": "Nice", "18": "Naughty", "19": "Naughty", "20": "Naughty", "21": "Nice", "22": "Naughty", "23": "Nice", "24": "Naughty", "25": "Naughty", "26": "Naughty", "27": "Nice", "28": "Naughty"}, "March": {"1": "Naughty", "2": "Nice", "3": "Nice", "4": "Naughty", "5": "Naughty", "6": "Naughty", "7": "Naughty", "8": "Nice", "9": "Naughty", "10": "Naughty", "11": "Naughty", "12": "Nice", "13": "Naughty", "14": "Naughty", "15": "Naughty", "16": "Naughty", "17": "Nice", "18": "Nice", "19": "Naughty", "20": "Naughty", "21": "Naughty", "22": "Nice", "23": "Naughty", "24": "Nice", "25": "Naughty", "26": "Naughty", "27": "Naughty", "28": "Naughty", "29": "Naughty", "30": "Nice", "31": "Naughty"}, "April": {"1": "Nice", "2": "Nice", "3": "Naughty", "4": "Naughty", "5": "Naughty", "6": "Naughty", "7": "Naughty", "8": "Naughty", "9": "Naughty", "10": "Naughty", "11": "Naughty", "12": "Nice", "13": "Naughty", "14": "Naughty", "15": "Nice", "16": "Naughty", "17": "Naughty", "18": "Nice", "19": "Nice", "20": "Naughty", "21": "Nice", "22": "Naughty", "23": "Naughty", "24": "Nice", "25": "Nice", "26": "Naughty", "27": "Naughty", "28": "Naughty", "29": "Nice", "30": "Naughty"}, "May": {"1": "Nice", "2": "Naughty", "3": "Naughty", "4": "Naughty", "5": "Nice", "6": "Nice", "7": "Naughty", "8": "Naughty", "9": "Naughty", "10": "Naughty", "11": "Naughty", "12": "Naughty", "13": "Naughty", "14": "Naughty", "15": "Naughty", "16": "Nice", "17": "Naughty", "18": "Nice", "19": "Nice", "20": "Nice", "21": "Nice", "22": "Naughty", "23": "Naughty", "24": "Naughty", "25": "Naughty", "26": "Nice", "27": "Nice", "28": "Nice", "29": "Nice", "30": "Naughty", "31": "Naughty"}, "June": {"1": "Naughty", "2": "Naughty", "3": "Nice", "4": "Naughty", "5": "Naughty", "6": "Naughty", "7": "Naughty", "8": "Naughty", "9": "Naughty", "10": "Naughty", "11": "Nice", "12": "Naughty", "13": "Naughty", "14": "Naughty", "15": "Naughty", "16": "Naughty", "17": "Nice", "18": "Nice", "19": "Nice", "20": "Naughty", "21": "Naughty", "22": "Naughty", "23": "Naughty", "24": "Naughty", "25": "Naughty", "26": "Nice", "27": "Nice", "28": "Naughty", "29": "Naughty", "30": "Naughty"}, "July": {"1": "Naughty", "2": "Nice", "3": "Naughty", "4": "Naughty", "5": "Naughty", "6": "Naughty", "7": "Naughty", "8": "Naughty", "9": "Nice", "10": "Naughty", "11": "Naughty", "12": "Naughty", "13": "Naughty", "14": "Naughty", "15": "Naughty", "16": "Naughty", "17": "Naughty", "18": "Naughty", "19": "Nice", "20": "Nice", "21": "Nice", "22": "Naughty", "23": "Naughty", "24": "Naughty", "25": "Naughty", "26": "Naughty", "27": "Nice", "28": "Naughty", "29": "Nice", "30": "Nice", "31": "Naughty"}, "August": {"1": "Nice", "2": "Naughty", "3": "Naughty", "4": "Naughty", "5": "Naughty", "6": "Naughty", "7": "Naughty", "8": "Naughty", "9": "Nice", "10": "Naughty", "11": "Naughty", "12": "Naughty", "13": "Naughty", "14": "Naughty", "15": "Naughty", "16": "Nice", "17": "Naughty", "18": "Nice", "19": "Naughty", "20": "Nice", "21": "Naughty", "22": "Nice", "23": "Nice", "24": "Naughty", "25": "Naughty", "26": "Naughty", "27": "Naughty", "28": "Nice", "29": "Naughty", "30": "Naughty", "31": "Naughty"}, "September": {"1": "Nice", "2": "Naughty", "3": "Naughty", "4": "Naughty", "5": "Naughty", "6": "Nice", "7": "Nice", "8": "Naughty", "9": "Naughty", "10": "Naughty", "11": "Naughty", "12": "Nice", "13": "Naughty", "14": "Naughty", "15": "Naughty", "16": "Naughty", "17": "Nice", "18": "Naughty", "19": "Naughty", "20": "Nice", "21": "Nice", "22": "Nice", "23": "Nice", "24": "Naughty", "25": "Nice", "26": "Naughty", "27": "Naughty", "28": "Naughty", "29": "Nice", "30": "Naughty"}, "October": {"1": "Naughty", "2": "Naughty", "3": "Nice", "4": "Naughty", "5": "Naughty", "6": "Naughty", "7": "Nice", "8": "Naughty", "9": "Nice", "10": "Naughty", "11": "Nice", "12": "Naughty", "13": "Naughty", "14": "Naughty", "15": "Nice", "16": "Naughty", "17": "Naughty", "18": "Nice", "19": "Nice", "20": "Naughty", "21": "Nice", "22": "Naughty", "23": "Naughty", "24": "Naughty", "25": "Naughty", "26": "Nice", "27": "Nice", "28": "Nice", "29": "Naughty", "30": "Nice", "31": "Nice"}, "November": {"1": "Naughty", "2": "Naughty", "3": "Nice", "4": "Naughty", "5": "Naughty", "6": "Naughty", "7": "Nice", "8": "Naughty", "9": "Nice", "10": "Naughty", "11": "Naughty", "12": "Nice", "13": "Naughty", "14": "Nice", "15": "Naughty", "16": "Nice", "17": "Naughty", "18": "Nice", "19": "Naughty", "20": "Nice", "21": "Naughty", "22": "Naughty", "23": "Naughty", "24": "Naughty", "25": "Naughty", "26": "Naughty", "27": "Nice", "28": "Nice", "29": "Naughty", "30": "Nice"}, "December": {"1": "Naughty", "2": "Nice", "3": "Naughty", "4": "Naughty", "5": "Naughty", "6": "Naughty", "7": "Nice", "8": "Naughty", "9": "Nice", "10": "Naughty", "11": "Naughty", "12": "Naughty", "13": "Naughty", "14": "Nice", "15": "Naughty", "16": "Nice", "17": "Naughty", "18": "Naughty", "19": "Nice", "20": "Nice", "21": "Naughty", "22": "Nice", "23": "Naughty", "24": "Naughty", "25": "Naughty", "26": "Naughty", "27": "Naughty", "28": "Naughty", "29": "Naughty", "30": "Naughty", "31": "Nice"}})) // "Naughty!"
 
+// ---------------------------------------------------------------------------
 
+// Since everybody hates chaos and loves sorted lists we should implement some more sorting algorithms. Your task is to implement a Bubble sort (for some help look at https://en.wikipedia.org/wiki/Bubble_sort) and return a list of snapshots after each change of the initial list.
+// e.g.
+// If the initial list would be l=[1,2,4,3] my algorithm rotates l[2] and l[3] and after that it adds [1,2,3,4] to the result, which is a list of snapshots.
+
+// function bubble(arr) {
+//   const resultArr = [];
+//   let swapped;
+
+//   for (let j = 0; j < arr.length - 1; j++) {
+//     swapped = false;
+//     for (let i = 0; i < arr.length - 1 - j; i++) {
+//       if (arr[i] > arr[i + 1]) {
+//         [arr[i], arr[i + 1]] = [arr[i + 1], arr[i]];
+//         resultArr.push([...arr]);
+//         swapped = true;
+//       }
+//     }
+
+//     if (!swapped) {
+//       break;
+//     }
+//   }
+
+//   return resultArr
+// }
+
+// console.log(bubble([2,1,4,3])) //[[1,2,4,3],[1,2,3,4]]
+// console.log(bubble([1,4,3,6,7,9,2,5,8]))  //[
+//       // [1, 3, 4, 6, 7, 9, 2, 5, 8],
+//       // [1, 3, 4, 6, 7, 2, 9, 5, 8],
+//       // [1, 3, 4, 6, 7, 2, 5, 9, 8],
+//       // [1, 3, 4, 6, 7, 2, 5, 8, 9],
+//       // [1, 3, 4, 6, 2, 7, 5, 8, 9],
+//       // [1, 3, 4, 6, 2, 5, 7, 8, 9],
+//       // [1, 3, 4, 2, 6, 5, 7, 8, 9],
+//       // [1, 3, 4, 2, 5, 6, 7, 8, 9],
+//       // [1, 3, 2, 4, 5, 6, 7, 8, 9],
+//       // [1, 2, 3, 4, 5, 6, 7, 8, 9]
+//     // ]
+// console.log(bubble([1,2,3,4])) //[]
+
+// --------------------------------------------------------------------------
+
+// There are just some things you can't do on television. In this case, you've just come back from having a "delicious" Barth burger and you're set to give an interview. The Barth burger has made you queezy, and you've forgotten some of the import rules of the "You Can't Do That on Television" set.
+// If you say any of the following words a large bucket of "water" will be dumped on you: "water", "wet", "wash" This is true for any form of those words, like "washing", "watered", etc.
+// If you say any of the following phrases you will be doused in "slime": "I don't know", "slime"
+// If you say both in one sentence, a combination of water and slime, "sludge", will be dumped on you.
+// Write a function, bucketOf(str), that takes a string and determines what will be dumped on your head. If you haven't said anything you shouldn't have, the bucket should be filled with "air". The words should be tested regardless of case.
+
+// function bucketOf(str) {
+//   const lowerStr = str.toLowerCase();
+//   const water = lowerStr.includes('water') || lowerStr.includes('wet') || lowerStr.includes('wash')
+//   const slime = lowerStr.includes("i don't know") || lowerStr.includes('slime')
+
+//   if (water && slime) {
+//     return 'sludge'
+//   } else if (water) {
+//     return 'water'
+//   } else if (slime) {
+//     return 'slime'
+//   } else {
+//     return 'air'
+//   }
+// }
+
+// console.log(bucketOf("What is that, WATER?!?")) //"water"
+// console.log(bucketOf("I don't know if I'm doing this right.")) //"slime"
+// console.log(bucketOf("You won't get me!")) //"air"
+
+// --------------------------------------------------------------------------
+
+// You order a shirt for your friend that has a word written in sign language on it, you would like to fool your friend into thinking it says something other than what it actually says.
+// Your friend is smart, but he can't know what he doesn't already know, he only knows a certain amount of letters in sign language. Given the word on the shirt, the word you are attempting to make your friend believe is on the shirt, and the letters in sign language your friends knows, figure out if he can tell that you are fooling him. Return true if your friend can figure out you are fooling him, otherwise return false.
+// It is guaranteed that both words will be the same length and will be in lowercase letters (a-z)
+// function gaslighting(shirtWord, yourWord, friendsLetters) {
+//   for ( let i = 0; i < shirtWord.length; i++) {
+//     if (shirtWord[i] !== yourWord[i] && (friendsLetters.includes(shirtWord[i]) || friendsLetters.includes(yourWord[i]))) {
+//       return true;
+//     }
+//   }
+
+//   return false;
+// }
+
+// console.log(gaslighting("snack","snake","c")) //true
+// console.log(gaslighting("snack","snack","snack")) //false
+// console.log(gaslighting("snake","snack","c")) //true
+// console.log(gaslighting("ping","pong","png")) //false
+// console.log(gaslighting("ping","pong","i")) //true
+
+// --------------------------------------------------------------------------
+
+// Alireza and Ali have a 3×3 table and playing on that. They have 4 tables (2×2) A,B,C and D in this table.
+// At beginning all of 9 numbers in 3×3 table is zero.
+// Alireza in each move choose a 2×2 table from A, B, C and D and increase all of 4 numbers in that by one.
+// He asks Ali, how much he increase table A, B, C and D. (if he cheats you should return [-1])
+// Your task is to help Ali.
+// function tableGame(table) {
+//   const [firstLine, secondLine, lastLine] = table
+
+//   for (let i = 0; i < firstLine.length; i++) {
+//     if (firstLine[i] + lastLine[i] !== secondLine[i]) {
+//       return [-1]
+//     }
+//   }
+
+//   return [firstLine[0], firstLine[firstLine.length - 1], lastLine[0], lastLine[lastLine.length - 1]]
+// }
+
+// console.log(tableGame([[1,2,1], [2,4,2], [1,2,1]])) //[1, 1, 1, 1]
+// console.log(tableGame([[3,7,4], [5,16,11], [2,9,7]])) //[3, 4, 2, 7]
+// console.log(tableGame([[1,4,2], [5,10,5], [4,7,3]])) //[-1]
+// console.log(tableGame([[2,4,2], [4,6,4], [2,4,2]])) //[-1]
+// console.log(tableGame([[2,4,2], [4,8,4], [2,4,2]])) //[2, 2, 2, 2]
+// console.log(tableGame([[1,3,2], [5,10,5], [4,7,3]])) //[1, 2, 4, 3]
+// console.log(tableGame([[1,2,1], [1,2,1], [1,2,1]])) //[-1]
+
+// --------------------------------------------------------------------------
+
+// You have some people who are betting money, and they all start with the same amount of money (this number>0).
+// Find out if the given end-state of amounts is possible after the betting is over and money is redistributed.
+// function learnCharitableGame(arr) {
+//   const summElement = arr.reduce((sum, number) => {
+//     return sum += number
+//   }, 0)
+
+//   if (summElement % arr.length === 0 && summElement !== 0) {
+//     return true
+//   } else { return false}
+// }
+
+// console.log(learnCharitableGame([0, 56, 100])) //true
+// console.log(learnCharitableGame([100, 100, 100, 90, 1, 0, 0])) //false
+// console.log(learnCharitableGame([0, 0, 0, 0])) //false
+// console.log(learnCharitableGame([33, 19, 38, 87, 93, 4])) //false
+// console.log(learnCharitableGame([11])) //true
+
+// --------------------------------------------------------------------------
+
+// You are given a list of unique integers arr, and two integers a and b. Your task is to find out whether or not a and b appear consecutively in arr, and return a boolean value (True if a and b are consecutive, False otherwise).
+// It is guaranteed that a and b are both present in arr.
+// function consecutive(arr, a, b) {
+//   for (let i = 0; i < arr.length; i++) {
+//     if ((arr[i] === a && arr[i + 1] === b) || (arr[i] === b && arr[i + 1] === a)) {
+//       return true
+//     }
+//   }
+
+//   return false
+// }
+
+// console.log(consecutive([1, 3, 5, 7], 3, 7)) //false
+// console.log(consecutive([1, 3, 5, 7], 3, 1)) //true
+// console.log(consecutive([1, 6, 9, -3, 4, -78, 0], -3, 4)) //true
 
 
