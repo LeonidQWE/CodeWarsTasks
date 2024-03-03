@@ -505,4 +505,59 @@
 // console.log(consecutive([1, 3, 5, 7], 3, 1)) //true
 // console.log(consecutive([1, 6, 9, -3, 4, -78, 0], -3, 4)) //true
 
+// --------------------------------------------------------------------------
+
+// Write a function that accepts an array of integers code and a key number. As the result, it should return string containg a decoded message from the code.
+// function decode (code, n) {
+//   const codeTable = {
+//     1: 'a', 2: 'b', 3: 'c', 4: 'd', 5: 'e', 6: 'f', 7: 'g', 8: 'h', 9: 'i', 10: 'j',
+//     11: 'k', 12: 'l', 13: 'm', 14: 'n', 15: 'o', 16: 'p', 17: 'q', 18: 'r', 19: 's',
+//     20: 't', 21: 'u', 22: 'v', 23: 'w', 24: 'x', 25: 'y', 26: 'z',
+//   }
+
+//   const stringN = String(n);
+
+//   const newWord = code.map((item, index) => {
+//     return index < stringN.length
+//       ?
+//       item -= Number(stringN[index])
+//       :
+//       item -= Number(stringN[index % stringN.length]);
+//   })
+
+//   return newWord.map((item) => codeTable[item])
+//                 .join('');
+// }
+
+// console.log(decode([ 20, 12, 18, 30, 21], 1939)) //"scout"
+// console.log(decode([ 14, 10, 22, 29, 6, 27, 19, 18, 6, 12, 8], 1939)) //"masterpiece"
+
+// --------------------------------------------------------------------------
+// Task
+// We want to turn the given integer into a number that has only one non-zero digit using a tail rounding approach. This means that at each step we take the last non 0 digit of the number and round it to 0 or to 10. If it's less than 5 we round it to 0 if it's larger than or equal to 5 we round it to 10 (rounding to 10 means increasing the next significant digit by 1). The process stops immediately once there is only one non-zero digit left.
+// function rounders(value) {
+//   const arrOfValue = String(value).split('')
+
+//   for (let i = (arrOfValue.length - 1); i > 0; i-- ) {
+//     if (arrOfValue[i] >= 5) {
+//       arrOfValue[i - 1] = Number(arrOfValue[i - 1]) + 1;
+//     }
+//     arrOfValue[i] = 0;
+//   }
+
+//   return Number(arrOfValue.join(''))
+// }
+
+// console.log(rounders(15)) //20
+// console.log(rounders(1234)) //1000
+// console.log(rounders(1445)) //2000
+// console.log(rounders(14)) //10
+// console.log(rounders(99)) //100
+// console.log(rounders(10)) //10
+
+
+
+
+
+
 
