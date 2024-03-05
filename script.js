@@ -583,4 +583,35 @@
 // console.log(solve([4,4,2,5,1,1,3,3,2,8])) //[1,1,2,2,3,3,4,4,5,8]
 // console.log(solve([4,9,5,0,7,3,8,4,9,0])) //[0,0,4,4,9,9,3,5,7,8]
 
+//-----------------------------------------------------
+
+// Your job is to group the words in anagrams.
+// What is an anagram ?
+// star and tsar are anagram of each other because you can rearrange the letters for star to obtain tsar.
+// function groupAnagrams(words){
+//   const anagramGroups = {};
+
+//   words.forEach((word) => {
+//     const sortedWord = word.split('').sort().join('');
+//     if (anagramGroups[sortedWord]) {
+//       anagramGroups[sortedWord].push(word);
+//     } else {
+//       anagramGroups[sortedWord] = [word];
+//     }
+//   });
+
+//   return Object.values(anagramGroups)
+// }
+
+// console.log(groupAnagrams(["tsar", "rat", "tar", "star", "tars", "cheese"]))
+// [
+  // ["tsar", "star", "tars"],
+  // ["rat", "tar"],
+  // ["cheese"]
+// ]
+// console.log(groupAnagrams(["rat", "tar", "star"])) //[["rat", "tar"], ["star"]]
+
+
+
+
 
