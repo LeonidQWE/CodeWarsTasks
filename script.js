@@ -731,27 +731,122 @@
 
 // You probably know the "like" system from Facebook and other pages. People can "like" blog posts, pictures or other items. We want to create the text that should be displayed next to such an item.
 // Implement the function which takes an array containing the names of people that like an item. It must return the display text as shown in the examples:
-function likes(names) {
-  let resultString = '';
+// function likes(names) {
+//   let resultString = '';
 
 
-  if (names.length <= 0) {
-    resultString = 'no one'
-  } else if (names.length === 1) {
-    resultString = names[0]
-  } else if (names.length === 2) {
-    resultString = `${names[0]} and ${names[1]}`
-  } else if (names.length === 3){
-    resultString = `${names[0]}, ${names[1]} and ${names[2]}`
-  } else {
-    resultString = `${names[0]}, ${names[1]} and 2 others`
-  }
+//   if (names.length <= 0) {
+//     resultString = 'no one'
+//   } else if (names.length === 1) {
+//     resultString = names[0]
+//   } else if (names.length === 2) {
+//     resultString = `${names[0]} and ${names[1]}`
+//   } else if (names.length === 3){
+//     resultString = `${names[0]}, ${names[1]} and ${names[2]}`
+//   } else {
+//     resultString = `${names[0]}, ${names[1]} and 2 others`
+//   }
 
-  return `${resultString} likes this`
-}
+//   return `${resultString} likes this`
+// }
 
 // console.log(likes([])) //'no one likes this'
 // console.log(likes(['Peter'])) //'Peter likes this'
 // console.log(likes(['Jacob', 'Alex'])) //'Jacob and Alex like this'
 // console.log(likes(['Max', 'John', 'Mark'])) //'Max, John and Mark like this'
 // console.log(likes(['Alex', 'Jacob', 'Mark', 'Max'])) //'Alex, Jacob and 2 others like this
+
+//---------------------------------------------------------------------------
+
+// Given n, take the sum of the digits of n. If that value has more than one digit, continue reducing in this way until a single-digit number is produced. The input will be a non-negative integer.
+
+// function digitalRoot(n) {
+//   let resultNumber = 0
+
+//   for (let i = 0; i <= (String(n).length - 1); i++) {
+//     resultNumber += Number(String(n)[i])
+//   }
+
+//   if (String(resultNumber).length < 2) {
+//     return resultNumber
+//   } else {
+//     return digitalRoot(resultNumber)
+//   }
+
+//   // Better
+//   // while (n >= 10) {
+//   //   n = [...String(n)].reduce((acc, digit) => acc + Number(digit), 0);
+//   // }
+//   // return n;
+// }
+
+// console.log(digitalRoot(16)) //1 + 6 = 7
+// console.log(digitalRoot(942)) //9 + 4 + 2 = 15  -->  1 + 5 = 6
+// console.log(digitalRoot(132189)) //1 + 3 + 2 + 1 + 8 + 9 = 24  -->  2 + 4 = 6
+// console.log(digitalRoot(493193)) //4 + 9 + 3 + 1 + 9 + 3 = 29  -->  2 + 9 = 11  -->  1 + 1 = 2
+
+//---------------------------------------------------------------------------
+
+// Your goal in this kata is to implement a difference function, which subtracts one list from another and returns the result.
+// It should remove all values from list a, which are present in list b keeping their order.
+// If a value is present in b, all of its occurrences must be removed from the other:
+
+// function arrayDiff(a, b) {
+//   for (let i = 0; i < b.length; i++) {
+//     a = a.filter((number) => number !== b[i])
+//   }
+
+//   return a
+// }
+
+// console.log(arrayDiff([1,2], [1])) //[2], "a was [1,2], b was [1]"
+// console.log(arrayDiff([1,2,2], [1])) //[2,2], "a was [1,2,2], b was [1]"
+// console.log(arrayDiff([1,2,2], [2])) //[1], "a was [1,2,2], b was [2]"
+// console.log(arrayDiff([1,2,2], [])) //[1,2,2], "a was [1,2,2], b was []"
+// console.log(arrayDiff([], [1,2])) //[], "a was [], b was [1,2]"
+// console.log(arrayDiff([1,2,3], [1,2])) //[3], "a was [1,2,3], b was [1,2]"
+
+//---------------------------------------------------------------------------
+
+// Write a function that accepts an array of 10 integers (between 0 and 9), that returns a string of those numbers in the form of a phone number.
+// The returned format must be correct in order to complete this challenge.
+// Don't forget the space after the closing parentheses!
+// function createPhoneNumber(numbers){
+//   if (numbers.length !== 10) {
+//     return 'incorrect number of digits';
+//   }
+
+//   return `(${numbers.slice(0, 3).join('')}) ${numbers.slice(3, 6).join('')}-${numbers.slice(6, 10).join('')}`;
+// }
+
+// console.log(createPhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0])) //"(123) 456-7890"
+// console.log(createPhoneNumber([1, 1, 1, 1, 1, 1, 1, 1, 1, 1])) //"(111) 111-1111"
+// console.log(createPhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0])) //"(123) 456-7890"
+
+//---------------------------------------------------------------------------
+
+// Write a function that takes an integer as input, and returns the number of bits that are equal to one in the binary representation of that number. You can guarantee that input is non-negative.
+// Example: The binary representation of 1234 is 10011010010, so the function should return 5 in this case
+// const countBits = function(n) {
+//   const binary = n.toString(2);
+//   let count = 0;
+//   for (let i = 0; i < String(binary).length; i++) {
+//     if (String(binary)[i] === '1') {
+//       count += 1;
+//     }
+//   }
+
+//   return count;
+
+// //Clever
+// //return n.toString(2).replace(/0/g,'').length;
+// }
+
+// console.log(countBits(0)) //0
+// console.log(countBits(4)) //1
+// console.log(countBits(7)) //2
+// console.log(countBits(9)) //2
+// console.log(countBits(10)) //2
+
+//---------------------------------------------------------------------------
+
