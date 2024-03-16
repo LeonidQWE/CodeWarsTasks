@@ -317,3 +317,175 @@
 // console.log(findOutlier([160, 3, 1719, 19, 11, 13, -21])) // 160
 
 //---------------------------------------------------------------------------
+
+// // Write a function that will return the count of distinct case-insensitive alphabetic characters and numeric digits that occur more than once in the input string. The input string can be assumed to contain only alphabets (both uppercase and lowercase) and numeric digits.
+// function duplicateCount(text){
+//   const symbolsObj = {};
+//   for (let i = 0; i < text.length; i++) {
+//     if (text[i].toLowerCase() in symbolsObj) {
+//       symbolsObj[text[i].toLowerCase()] += 1;
+//     } else {
+//       symbolsObj[text[i].toLowerCase()] = 1;
+//     }
+//   }
+
+//   return Object.values(symbolsObj).filter(item => item !== 1).length
+// }
+
+// console.log(duplicateCount("")) //0
+// console.log(duplicateCount("abcde")) //0
+// console.log(duplicateCount("aabbcde")) //2
+// console.log(duplicateCount("aabBcde")) //2
+// console.log(duplicateCount("Indivisibility")) //1
+// console.log(duplicateCount("Indivisibilities")) //2
+
+//---------------------------------------------------------------------------
+
+// The goal of this exercise is to convert a string to a new string where each character in the new string is "(" if that character appears only once in the original string, or ")" if that character appears more than once in the original string. Ignore capitalization when determining if a character is a duplicate.
+// function duplicateEncode(word){
+//   const symbolsObj = {};
+//   const newStr = word.toLowerCase();
+//   for (let char of newStr) {
+//     symbolsObj[char] = (symbolsObj[char] || 0) + 1;
+//   }
+
+//   return word.toLowerCase()
+//               .split('')
+//               .map(symbol => symbolsObj[symbol] > 1 ? ')' : '(')
+//               .join('')
+// }
+
+// console.log(duplicateEncode("din")) //"((("
+// console.log(duplicateEncode("recede")) //"()()()"
+// console.log(duplicateEncode("Success")) //")())())"
+// console.log(duplicateEncode("(( @")) //"))(("
+
+//---------------------------------------------------------------------------
+
+// You live in the city of Cartesia where all roads are laid out in a perfect grid. You arrived ten minutes too early to an appointment, so you decided to take the opportunity to go for a short walk. The city provides its citizens with a Walk Generating App on their phones -- everytime you press the button it sends you an array of one-letter strings representing directions to walk (eg. ['n', 's', 'w', 'e']). You always walk only a single block for each letter (direction) and you know it takes you one minute to traverse one city block, so create a function that will return true if the walk the app gives you will take you exactly ten minutes (you don't want to be early or late!) and will, of course, return you to your starting point. Return false otherwise.
+// function isValidWalk(walk) {
+//   let result = 0;
+
+//   if (walk.length !== 10) {
+//     return false;
+//   }
+
+//   walk.forEach((direction) => {
+//     switch (direction) {
+//       case 'n': result -= 1;
+//         break;
+//       case 's': result += 1;
+//         break;
+//       case 'e': result += 2;
+//         break;
+//       case 'w': result -= 2;
+//         break;
+//       default:
+//         return false;
+//     }
+//   })
+
+//   return result === 0 ? true : false;
+// }
+
+// console.log(isValidWalk(['n','s','n','s','n','s','n','s','n','s'])) //true
+// console.log(isValidWalk(['w','e','w','e','w','e','w','e','w','e','w','e'])) //false
+// console.log(isValidWalk(['w'])) //false
+// console.log(isValidWalk(['n','n','n','s','n','s','n','s','n','s'])) //false
+
+//---------------------------------------------------------------------------
+
+// In this kata you are required to, given a string, replace every letter with its position in the alphabet.
+// If anything in the text isn't a letter, ignore it and don't return it.
+// "a" = 1, "b" = 2, etc.
+// function alphabetPosition(text) {
+//   const alphabet = {
+//     'a': 1, 'b': 2, 'c': 3, 'd': 4, 'e': 5, 'f': 6, 'g': 7, 'h': 8, 'i': 9, 'j': 10,
+//     'k': 11, 'l': 12, 'm': 13, 'n': 14, 'o': 15, 'p': 16, 'q': 17, 'r': 18, 's': 19, 't': 20,
+//     'u': 21, 'v': 22, 'w': 23, 'x': 24, 'y': 25, 'z': 26,
+//   };
+//   const result = [];
+
+//   for (let char of text) {
+//     if (char.toLowerCase() in alphabet) {
+//       result.push(alphabet[char.toLowerCase()]);
+//     } else {continue}
+//   }
+
+//   return result.join(' ');
+// }
+
+// console.log(alphabetPosition("The sunset sets at twelve o' clock.")) //"20 8 5 19 21 14 19 5 20 19 5 20 19 1 20 20 23 5 12 22 5 15 3 12 15 3 11"
+// console.log(alphabetPosition("The narwhal bacons at midnight.")) //"20 8 5 14 1 18 23 8 1 12 2 1 3 15 14 19 1 20 13 9 4 14 9 7 8 20"
+
+//---------------------------------------------------------------------------
+
+// Write a function, persistence, that takes in a positive parameter num and returns its multiplicative persistence, which is the number of times you must multiply the digits in num until you reach a single digit.
+// function persistence(num) {
+//   let count = 0;
+
+  // // if (String(num).length === 1) {
+  // //   return count
+  // // } else {
+  // //   count++
+  // //   const newNumber = String(num).split('').reduce((acc, number) => {
+  // //     return acc *= number;
+  // //   }, 1)
+  // //   return count + persistence(newNumber)
+  // // }
+
+//   //Better
+//   while (String(num).length > 1) {
+//     count++;
+//     num = String(num).split('').reduce((acc, digit) => acc * digit, 1);
+//   }
+
+//   return count;
+// }
+
+// console.log(persistence(39)) //3
+// console.log(persistence(4)) //0
+// console.log(persistence(25)) //2
+// console.log(persistence(999)) //4
+
+//---------------------------------------------------------------------------
+
+// Complete the method/function so that it converts dash/underscore delimited words into camel casing. The first word within the output should be capitalized only if the original word was capitalized (known as Upper Camel Case, also often referred to as Pascal case). The next words should be always capitalized.
+// function toCamelCase(str){
+//   let result = '';
+//   for (let i = 0; i < str.length; i++) {
+//     if (str[i] === '-' || str[i] === '_') {
+//       result += str[i + 1].toUpperCase();
+//       i++;
+//       continue
+//     }
+//     result += str[i];
+//   }
+
+//   return result;
+// }
+
+// console.log(toCamelCase('')) //''
+// console.log(toCamelCase('the_stealth_warrior')) //theStealthWarrior
+// console.log(toCamelCase('The-Stealth-Warrior')) //TheStealthWarrior
+// console.log(toCamelCase('A-B-C')) //ABC
+
+//---------------------------------------------------------------------------
+// A Narcissistic Number (or Armstrong Number) is a positive number which is the sum of its own digits, each raised to the power of the number of digits in a given base. In this Kata, we will restrict ourselves to decimal (base 10).
+// The Challenge:
+// Your code must return true or false (not 'true' and 'false') depending upon whether the given number is a Narcissistic number in base 10.
+// This may be True and False in your language, e.g. PHP.
+// Error checking for text strings or other invalid inputs is not required, only valid positive non-zero integers will be passed into the function.
+// function narcissistic(value) {
+//   let result = 0;
+//   for (let i = 0; i < String(value).length; i++) {
+//     result += Math.pow( String(value)[i], String(value).length);
+//   }
+
+//   return result === value;
+// }
+
+// console.log(narcissistic(7)) //true
+// console.log(narcissistic(153)) //true
+// console.log(narcissistic(122)) //false
+// console.log(narcissistic(487)) //false
