@@ -1,4 +1,3 @@
-//-----------------------------------------------------
 //-----------------------6kyu--------------------------
 //-----------------------------------------------------
 // In this kata, you will sort elements in an array by decreasing frequency of elements. If two elements have the same frequency, sort them by increasing value
@@ -471,6 +470,7 @@
 // console.log(toCamelCase('A-B-C')) //ABC
 
 //---------------------------------------------------------------------------
+
 // A Narcissistic Number (or Armstrong Number) is a positive number which is the sum of its own digits, each raised to the power of the number of digits in a given base. In this Kata, we will restrict ourselves to decimal (base 10).
 // The Challenge:
 // Your code must return true or false (not 'true' and 'false') depending upon whether the given number is a Narcissistic number in base 10.
@@ -489,3 +489,242 @@
 // console.log(narcissistic(153)) //true
 // console.log(narcissistic(122)) //false
 // console.log(narcissistic(487)) //false
+
+//---------------------------------------------------------------------------
+
+// Your task is to sort a given string. Each word in the string will contain a single number. This number is the position the word should have in the result.
+// Note: Numbers can be from 1 to 9. So 1 will be the first word (not 0).
+// If the input string is empty, return an empty string. The words in the input String will only contain valid consecutive numbers.
+// function order(words){
+  // const arrWords = words.split(' ');
+  // const wordsObj = {};
+  // arrWords.forEach((word) => {
+  //   for (let i = 0; i < word.length; i++) {
+  //     if (!(isNaN(Number(word[i])))) {
+  //       wordsObj[word[i]] = word;
+  //     }
+  //   }
+  // })
+
+  // return Object.values(wordsObj).join(' ')
+
+  // //Better
+  // //   return words.split(' ')
+  // //               .sort((a, b) => a.match(/\d/) - b.match(/\d/))
+  // //               .join(' ')
+// }
+
+// console.log(order("is2 Thi1s T4est 3a")) //"Thi1s is2 3a T4est"
+// console.log(order("4of Fo1r pe6ople g3ood th5e the2")) //"Fo1r the2 g3ood 4of th5e pe6ople"
+// console.log(order("")) //""
+
+//---------------------------------------------------------------------------
+
+// As the name may already reveal, it works basically like a Fibonacci, but summing the last 3 (instead of 2) numbers of the sequence to generate the next. And, worse part of it, regrettably I won't get to hear non-native Italian speakers trying to pronounce it
+// So, if we are to start our Tribonacci sequence with [1, 1, 1] as a starting input (AKA signature), we have this sequence:
+// [1, 1 ,1, 3, 5, 9, 17, 31, ...]
+// But what if we started with [0, 0, 1] as a signature? As starting with [0, 1] instead of [1, 1] basically shifts the common Fibonacci sequence by once place, you may be tempted to think that we would get the same sequence shifted by 2 places, but that is not the case and we would get:
+// [0, 0, 1, 1, 2, 4, 7, 13, 24, ...]
+// Well, you may have guessed it by now, but to be clear: you need to create a fibonacci function that given a signature array/list, returns the first n elements - signature included of the so seeded sequence.
+// Signature will always contain 3 numbers; n will always be a non-negative number; if n == 0, then return an empty array (except in C return NULL) and be ready for anything else which is not clearly specified ;)
+// function tribonacci(signature,n){
+//   const signatureClone = structuredClone(signature);
+//   if (n < 3) {
+//     signatureClone.length = n;
+//     return signatureClone;
+//   }
+
+//   for (let i = 1; i <= (n - 3); i++) {
+//     let newNumber = signatureClone.slice(-3).reduce((sum, elem) => sum + elem, 0);
+//     signatureClone.push(newNumber);
+//   }
+
+//   return signatureClone;
+// }
+
+// console.log(tribonacci([1,1,1], 10)) //[1,1,1,3,5,9,17,31,57,105]
+// console.log(tribonacci([0,0,1], 10)) //[0,0,1,1,2,4,7,13,24,44]
+// console.log(tribonacci([0,1,1], 10)) //[0,1,1,2,4,7,13,24,44,81]
+// console.log(tribonacci([1,0,0], 10)) //[1,0,0,1,1,2,4,7,13,24]
+// console.log(tribonacci([0,0,0], 10)) //[0,0,0,0,0,0,0,0,0,0]
+// console.log(tribonacci([1,2,3], 10)) //[1,2,3,6,11,20,37,68,125,230]
+// console.log(tribonacci([3,2,1], 10)) //[3,2,1,6,9,16,31,56,103,190]
+// console.log(tribonacci([1,1,1],  1)) //[1]
+// console.log(tribonacci([300,200,100], 0)) //[]
+
+//---------------------------------------------------------------------------
+
+// Implement the function unique_in_order which takes as argument a sequence and returns a list of items without any elements with the same value next to each other and preserving the original order of elements.
+// function uniqueInOrder (iterable){
+//   const result = [];
+//   for (let i = 0; i < iterable.length; i++) {
+//     if (iterable[i] !== result[result.length - 1]) {
+//       result.push(iterable[i]);
+//     }
+//   }
+
+//   return result;
+// }
+
+// console.log(uniqueInOrder('AAAABBBCCDAABBB')) //['A', 'B', 'C', 'D', 'A', 'B']
+// console.log(uniqueInOrder('ABBCcAD')) //['A', 'B', 'C', 'c', 'A', 'D']
+// console.log(uniqueInOrder([1,2,2,3,3])) //[1,2,3]
+
+//---------------------------------------------------------------------------
+
+// Some numbers have funny properties. For example:
+// 89 --> 8¹ + 9² = 89 * 1
+// 695 --> 6² + 9³ + 5⁴= 1390 = 695 * 2
+// 46288 --> 4³ + 6⁴+ 2⁵ + 8⁶ + 8⁷ = 2360688 = 46288 * 51
+// Given two positive integers n and p, we want to find a positive integer k, if it exists, such that the sum of the digits of n raised to consecutive powers starting from p is equal to k * n.
+// If it is the case we will return k, if not return -1.
+// Note: n and p will always be strictly positive integers.
+// function digPow(n, p){
+  // const digits = Array.from(String(n), Number);
+  // let sumNumber = 0;
+  // for (let i = 0; i < digits.length; i++) {
+    // sumNumber += Math.pow(digits[i], p);
+    // p++
+  // }
+
+  // const result = sumNumber / n;
+  // return Number.isInteger(result) ? result : -1;
+
+  // //Better
+  // // const x = String(n).split("").reduce((s, d, i) => s + Math.pow(d, p + i), 0)
+  // // return x % n ? -1 : x / n
+// }
+
+// console.log(digPow(89, 1)) //1
+// console.log(digPow(92, 1)) //-1
+// console.log(digPow(46288, 3)) //51
+
+//---------------------------------------------------------------------------
+
+// A pangram is a sentence that contains every single letter of the alphabet at least once. For example, the sentence "The quick brown fox jumps over the lazy dog" is a pangram, because it uses the letters A-Z at least once (case is irrelevant).
+// Given a string, detect whether or not it is a pangram. Return True if it is, False if not. Ignore numbers and punctuation.
+// function isPangram(string){
+//   const alpfabet = 'qwertyuiopasdfghjklzxcvbnm';
+//   const lowerString = string.toLowerCase();
+
+//   for (let char of alpfabet) {
+//     if (lowerString.indexOf(char) === -1) {
+//       return false
+//     }
+//   }
+
+//   return true
+// }
+
+// console.log(isPangram("The quick brown fox jumps over the lazy dog.")) //true
+// console.log(isPangram("This is not a pangram.")) //false
+
+//---------------------------------------------------------------------------
+
+// You are going to be given an array of integers. Your job is to take that array and find an index N where the sum of the integers to the left of N is equal to the sum of the integers to the right of N. If there is no index that would make this happen, return -1.
+// function findEvenIndex(arr) {
+//   for (let i = 0; i < arr.length; i++) {
+//     const firstSum = arr.slice(0, i).reduce((sum, number) => sum + number, 0);
+//     const secondSum = arr.slice(i + 1, arr.length).reduce((sum, number) => sum + number, 0);
+//     if (firstSum === secondSum) {
+//       return i;
+//     }
+//   }
+
+//   return -1;
+// }
+
+// console.log(findEvenIndex([1,2,3,4,3,2,1])) //3
+// console.log(findEvenIndex([1,100,50,-51,1,1])) //1
+// console.log(findEvenIndex([1,2,3,4,5,6])) //-1
+// console.log(findEvenIndex([20,10,30,10,10,15,35])) //3
+
+//---------------------------------------------------------------------------
+
+// Complete the solution so that it splits the string into pairs of two characters. If the string contains an odd number of characters then it should replace the missing second character of the final pair with an underscore ('_').
+// function solution(str){
+//   const result = [];
+//   for (let i = 0; i < str.length; i += 2) {
+//     if (str[i + 1] === undefined) {
+//       result.push(`${str[i]}_`);
+//     } else {
+//       result.push(`${str[i]}${str[i + 1]}`);
+//     }
+//   }
+
+//   return result;
+// }
+
+// console.log(solution("abcdefg")) //["ab", "cd", "ef"]
+// console.log(solution("abcdef")) //["ab", "cd", "ef", "g_"]
+// console.log(solution("")) //[]
+
+//---------------------------------------------------------------------------
+
+// You will be given an array of numbers. You have to sort the odd numbers in ascending order while leaving the even numbers at their original positions.
+// function sortArray(array) {
+//   const oddSortedNumbers = array.filter((number) => number % 2 !== 0).sort((a, b) => a - b);
+//   const evenNumbers = array.filter((number) => number % 2 === 0);
+//   const result = [];
+//   let oddIndex = 0;
+//   let evenIndex = 0;
+
+//   for (let num of array) {
+//     if (num % 2 !== 0) {
+//       result.push(oddSortedNumbers[oddIndex]);
+//       oddIndex++;
+//     } else {
+//       result.push(evenNumbers[evenIndex]);
+//       evenIndex++;
+//     }
+//   }
+
+//   return result;
+// }
+
+// console.log(sortArray([5, 3, 2, 8, 1, 4])) //[1, 3, 2, 8, 5, 4]
+// console.log(sortArray([5, 3, 1, 8, 0])) //[1, 3, 5, 8, 0]
+// console.log(sortArray([])) //[]
+// console.log(sortArray([4, 7, 2, 11, 6, 5, 8, 3])) //[4, 3, 2, 5, 6, 7, 8, 11]
+
+//---------------------------------------------------------------------------
+
+// Define a function that takes an integer argument and returns a logical value true or false depending on if the integer is a prime.
+// Per Wikipedia, a prime number ( or a prime ) is a natural number greater than 1 that has no positive divisors other than 1 and itself.
+// function isPrime(num) {
+//   if (num <= 1) {
+//     return false;
+//   }
+
+//   if (num <= 3) {
+//     return true;
+//   }
+
+//   if (num % 2 === 0 || num % 3 === 0) {
+//     return false;
+//   }
+
+//   const maxCount = Math.sqrt(num);
+//   for (let i = 4; i <= maxCount; i++) {
+//     if (num % i === 0) {
+//       return false;
+//     }
+//   }
+//   return true;
+// }
+
+// console.log(isPrime(0)) //false
+// console.log(isPrime(1)) //false
+// console.log(isPrime(2)) //true
+// console.log(isPrime(73)) //true
+// console.log(isPrime(75)) //false
+// console.log(isPrime(-1)) //false
+// console.log(isPrime(3)) //true
+// console.log(isPrime(5)) //true
+// console.log(isPrime(7)) //true
+// console.log(isPrime(41)) //true
+// console.log(isPrime(5099)) //true
+// console.log(isPrime(402523969)) //false
+
+//---------------------------------------------------------------------------
+
