@@ -728,3 +728,49 @@
 
 //---------------------------------------------------------------------------
 
+// Write a method that takes an array of consecutive (increasing) letters as input and that returns the missing letter in the array.
+// You will always get an valid array. And it will be always exactly one letter be missing. The length of the array will always be at least 2.
+// The array will always contain letters in only one case.
+// function findMissingLetter(array) {
+//   const arrayClone = structuredClone(array);
+//   let findChar = '';
+
+//   for (let i = 0; i < (arrayClone.length - 1); i++) {
+//     if (arrayClone[i + 1].charCodeAt() - arrayClone[i].charCodeAt() === 2) {
+//       findChar = arrayClone[i].charCodeAt() + 1;
+//       break;
+//     }
+//   }
+
+//   return String.fromCharCode(findChar);
+// }
+
+// console.log(findMissingLetter(['a','b','c','d','f'])) //'e'
+// console.log(findMissingLetter(['O','Q','R','S'])) //'P'
+
+//---------------------------------------------------------------------------
+
+// // Build a pyramid-shaped tower, as an array/list of strings, given a positive integer number of floors. A tower block is represented with "*" character.
+// function towerBuilder(nFloors) {
+//   const lastLineLength = nFloors + (nFloors - 1);
+//   const result = [];
+
+//   for (let i = lastLineLength; i > 0; i -= 2) {
+//     result.push('*'.repeat(i).padStart(i + ((lastLineLength - i) / 2)).padEnd(lastLineLength));
+//     // //***or */
+//     // //const line = ' '.repeat((nFloors - i) / 2) + '*'.repeat(i) + ' '.repeat((nFloors - i) / 2);
+//     // //result.push(line);
+//   }
+
+//   return result.reverse();
+//   // //return result;
+// }
+
+
+// // console.log(towerBuilder(1)) //["*"]
+// // console.log(towerBuilder(2)) //[" * ","***"]
+// console.log(towerBuilder(3)) //["  *  "," *** ","*****"]
+// console.log(towerBuilder(4)) //['   *   ', '  ***  ', ' ***** ', '*******']
+
+//---------------------------------------------------------------------------
+
