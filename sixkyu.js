@@ -801,3 +801,204 @@
 // console.log(high('d bb')) //'d'
 // console.log(high('aaa b')) //'aaa'
 
+//---------------------------------------------------------------------------
+
+// Alice and Bob were on a holiday. Both of them took many pictures of the places they've been, and now they want to show Charlie their entire collection. However, Charlie doesn't like these sessions, since the motif usually repeats. He isn't fond of seeing the Eiffel tower 40 times. He tells them that he will only sit for the session if they show the same motif at most N times. Luckily, Alice and Bob are able to encode the motif as a number. Can you help them to remove numbers such that their list contains each number only up to N times, without changing the order?
+// function deleteNth(arr,n){
+//   const arrClone = structuredClone(arr);
+//   const repeatCount = {};
+//   const result = [];
+
+//   for (let i = 0; i < arrClone.length; i++) {
+//     if (repeatCount[arrClone[i]]) {
+//       repeatCount[arrClone[i]] += 1;
+//     } else {
+//       repeatCount[arrClone[i]] = 1;
+//     }
+
+//     if (repeatCount[arrClone[i]] <= n) {
+//       result.push(arrClone[i])
+//     }
+//   }
+
+//   return result;
+// }
+
+// console.log(deleteNth([20,37,20,21], 1)) //[20,37,21]
+// console.log(deleteNth([1,1,3,3,7,2,2,2,2], 3)) //[1, 1, 3, 3, 7, 2, 2, 2]
+// console.log(deleteNth([1,1,1,1,1,1,1,1,1], 1))
+// console.log(deleteNth([12,39,19,39,39,19,12], 1)) //[12, 39, 19]
+
+//---------------------------------------------------------------------------
+
+// Given an array (arr) as an argument complete the function countSmileys that should return the total number of smiling faces.
+// Rules for a smiling face:
+// Each smiley face must contain a valid pair of eyes. Eyes can be marked as : or ;
+// A smiley face can have a nose but it does not have to. Valid characters for a nose are - or ~
+// Every smiling face must have a smiling mouth that should be marked with either ) or D
+// No additional characters are allowed except for those mentioned.
+// Valid smiley face examples: :) :D ;-D :~)
+// Invalid smiley faces: ;( :> :} :]
+// function countSmileys(arr) {
+//   let count = 0;
+//   const arrClone = structuredClone(arr);
+
+//   arrClone.forEach((face) => {
+//     if (face.length > 3) {
+//       return false
+//     }
+
+//     if (face.length === 3 && (face[1] !== '-' && face[1] !== '~')) {
+//       return false;
+//     }
+
+//     if ((face[0] === ':' || face[0] === ';')
+//           && (face[face.length - 1] === ')' || face[face.length - 1] === 'D')
+//       ) {
+//         count += 1;
+//     }
+//   })
+
+//   return count;
+// }
+
+// console.log(countSmileys([])) //0
+// console.log(countSmileys([':D',':~)',';~D',':)'])) //4
+// console.log(countSmileys([':)',':(',':D',':O',':;'])) //2
+// console.log(countSmileys([';]', ':[', ';*', ':$', ';-D'])) //1
+// console.log(countSmileys([":---)" , "))" , ";~~D" , ";D"])) //1
+
+//---------------------------------------------------------------------------
+
+// Your task is to construct a building which will be a pile of n cubes. The cube at the bottom will have a volume of n^3, the cube above will have volume of (n-1)^3 and so on until the top which will have a volume of 1^3. You are given the total volume m of the building. Being given m can you find the number n of cubes you will have to build?
+// function findNb(m) {
+//   let kubeCount = 0;
+//   let volume = m;
+
+//   for (let i = 1; volume > 0; i++) {
+//     volume -= Math.pow(i, 3);
+//     kubeCount = i;
+//   }
+
+//   if (volume < 0) {
+//     return -1;
+//   } else {
+//     return kubeCount
+//   }
+// }
+
+// console.log(findNb(4183059834009)) //2022
+// console.log(findNb(24723578342962)) //-1
+// console.log(findNb(135440716410000)) //4824
+// console.log(findNb(40539911473216)) //3568
+
+//---------------------------------------------------------------------------
+
+// Write a function that takes a string of braces, and determines if the order of the braces is valid. It should return true if the string is valid, and false if it's invalid. This Kata is similar to the Valid Parentheses Kata, but introduces new characters: brackets [], and curly braces {}. Thanks to @arnedag for the idea! All input strings will be nonempty, and will only consist of parentheses, brackets and curly braces: ()[]{}.
+// function validBraces(braces){
+//   const stack = [];
+//   const matches = {
+//     ')': '(',
+//     '}': '{',
+//     ']': '[',
+//   };
+
+//   for (let i = 0; i < braces.length; i++) {
+//     if (braces[i] in matches) {
+//       if (matches[braces[i]] === stack[stack.length - 1]) {
+//         stack.pop();
+//       } else {return false;}
+//     } else {
+//       stack.push(braces[i])
+//     }
+//   }
+
+//   return stack.length ? false : true
+// }
+
+// console.log(validBraces("()))")) //false
+// console.log(validBraces("()")) //true
+// console.log(validBraces("[]")) //true
+// console.log(validBraces("{}")) //true
+// console.log(validBraces("(){}[]")) //true
+// console.log(validBraces("([{}])")) //true
+// console.log(validBraces("(}")) //false
+// console.log(validBraces("[(])")) //false
+// console.log(validBraces("({})[({})]")) //true
+// console.log(validBraces("(})")) //false
+// console.log(validBraces("(({{[[]]}}))")) //true
+// console.log(validBraces("())({}}{()][][")) //false
+// console.log(validBraces("{}({})[]")) //true
+// console.log(validBraces("(((({{")) //false
+
+//---------------------------------------------------------------------------
+
+// Complete the solution so that the function will break up camel casing, using a space between words.
+// function solution(string) {
+//   let result = '';
+//   for (let i = 0; i < string.length; i++) {
+//     if (string[i] === string[i].toUpperCase()) {
+//       result += ` ${string[i]}`;
+//     } else {
+//       result += string[i];
+//     }
+//   }
+
+//   return result;
+// }
+
+// console.log(solution("")) //""
+// console.log(solution("camelCasing")) //"camel Casing"
+// console.log(solution("camelCasingTest")) //"camel Casing Test"
+
+//---------------------------------------------------------------------------
+
+// You are given an array(list) strarr of strings and an integer k. Your task is to return the first longest string consisting of k consecutive strings taken in the array.
+// function longestConsec(strarr, k) {
+//   let long = 0;
+//   let bestString = '';
+
+//   if (k < 1 || k > strarr.length) {
+//     return '';
+//   }
+
+//   for (let i = 0; i <= (strarr.length - k); i++) {
+//     let workingLine = strarr.slice(i, i + k).join('')
+//     if (workingLine.length > bestString.length) {
+//       bestString = workingLine
+//     }
+//   }
+
+//   return bestString
+// }
+
+// console.log(longestConsec(["zone", "abigail", "theta", "form", "libe", "zas"], 2)) //"abigailtheta"
+// console.log(longestConsec(["ejjjjmmtthh", "zxxuueeg", "aanlljrrrxx", "dqqqaaabbb", "oocccffuucccjjjkkkjyyyeehh"], 1)) //"oocccffuucccjjjkkkjyyyeehh"
+// console.log(longestConsec([], 3)) //""
+// console.log(longestConsec(["itvayloxrp","wkppqsztdkmvcuwvereiupccauycnjutlv","vweqilsfytihvrzlaodfixoyxvyuyvgpck"], 2)) //"wkppqsztdkmvcuwvereiupccauycnjutlvvweqilsfytihvrzlaodfixoyxvyuyvgpck"
+// console.log(longestConsec(["wlwsasphmxx","owiaxujylentrklctozmymu","wpgozvxxiu"], 2)) //"wlwsasphmxxowiaxujylentrklctozmymu"
+// console.log(longestConsec(["zone", "abigail", "theta", "form", "libe", "zas"], -2)) //""
+// console.log(longestConsec(["it","wkppv","ixoyx", "3452", "zzzzzzzzzzzz"], 3)) //"ixoyx3452zzzzzzzzzzzz"
+// console.log(longestConsec(["it","wkppv","ixoyx", "3452", "zzzzzzzzzzzz"], 15)) //""
+// console.log(longestConsec(["it","wkppv","ixoyx", "3452", "zzzzzzzzzzzz"], 0)) //""
+
+//---------------------------------------------------------------------------
+
+// You will be given a number and you will need to return it as a string in Expanded Form.
+// function expandedForm(num) {
+//   const stringOfNum = String(num)
+//   const arrOfNums = [];
+
+//   for (let i = 0; i < stringOfNum.length; i++) {
+//     if (stringOfNum[i] !== '0') {
+//       arrOfNums.push(`${stringOfNum[i]}${'0'.repeat(stringOfNum.length - 1 - i)}`);
+//     }
+//   }
+
+//   return arrOfNums.join(' + ');
+// }
+
+// console.log(expandedForm(12)) //'10 + 2'
+// console.log(expandedForm(42)) //'40 + 2'
+// console.log(expandedForm(70304)) //'70000 + 300 + 4'
+
