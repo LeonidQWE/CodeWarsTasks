@@ -1,5 +1,5 @@
-//-----------------------6kyu--------------------------
-//-----------------------------------------------------
+//-----------------------6kyu (part 1)--------------------------
+//--------------------------------------------------------------
 // In this kata, you will sort elements in an array by decreasing frequency of elements. If two elements have the same frequency, sort them by increasing value
 // function solve(arr){
 //   const objOfNumber = {};
