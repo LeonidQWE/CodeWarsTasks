@@ -35,3 +35,59 @@
 // console.log(pigIt('Hello world !')) //elloHay orldway !
 
 //--------------------------------------------------------------
+
+// Write a function, which takes a non-negative integer (seconds) as input and returns the time in a human-readable format (HH:MM:SS)
+// HH = hours, padded to 2 digits, range: 00 - 99
+// MM = minutes, padded to 2 digits, range: 00 - 59
+// SS = seconds, padded to 2 digits, range: 00 - 59
+// The maximum time never exceeds 359999 (99:59:59)
+// You can find some examples in the test fixtures.
+// function humanReadable (seconds) {
+//   const ours = Math.trunc(seconds / 3600);
+//   const minuts = Math.trunc((seconds - ours * 3600) / 60)
+//   const second = Math.trunc(seconds - ours * 3600 - minuts * 60)
+
+//   return `${String(ours).length < 2 ? '0' + ours : ours}:${String(minuts).length < 2 ? '0' + minuts : minuts}:${String(second).length < 2 ? '0' + second : second}`;
+// }
+
+// console.log(humanReadable(0)) //'00:00:00'
+// console.log(humanReadable(59)) //'00:00:59'
+// console.log(humanReadable(60)) //'00:01:00'
+// console.log(humanReadable(90)) //'00:01:30'
+// console.log(humanReadable(3599)) //'00:59:59'
+// console.log(humanReadable(3600)) //'01:00:00'
+// console.log(humanReadable(45296)) //'12:34:56'
+// console.log(humanReadable(86399)) //'23:59:59'
+// console.log(humanReadable(86400)) //'24:00:00'
+// console.log(humanReadable(359999)) //'99:59:59'
+
+//--------------------------------------------------------------
+
+// The rgb function is incomplete. Complete it so that passing in RGB decimal values will result in a hexadecimal representation being returned. Valid decimal values for RGB are 0 - 255. Any values that fall out of that range must be rounded to the closest valid value. Note: Your answer should always be 6 characters long, the shorthand with 3 will not work here.
+// function rgb(r, g, b) {
+//   const getCorrectValue = function (value) {
+//     if (value < 0) {
+//       return 0;
+//     } else if (value > 255) {
+//       return 255;
+//     } else {return value;}
+//   }
+
+//   const correctR = getCorrectValue(r);
+//   const correctG = getCorrectValue(g);
+//   const correctB = getCorrectValue(b);
+
+//   const redHex = correctR.toString(16).padStart(2, '0').toUpperCase();
+//   const greenHex = correctG.toString(16).padStart(2, '0').toUpperCase();
+//   const blueHex = correctB.toString(16).padStart(2, '0').toUpperCase();
+
+//   return `${redHex}${greenHex}${blueHex}`;
+// }
+
+// console.log(rgb(0, 0, 0,)) //'000000'
+// console.log(rgb(0, 0, -20,)) //'000000'
+// console.log(rgb(300, 255, 255,)) //'FFFFFF'
+// console.log(rgb(173, 255, 47,)) //'ADFF2F'
+
+//--------------------------------------------------------------
+
