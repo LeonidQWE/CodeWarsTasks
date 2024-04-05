@@ -115,3 +115,63 @@
 // console.log(dirReduc(["NORTH", "SOUTH", "SOUTH", "EAST", "WEST", "NORTH", "WEST"])) //["WEST"]
 // console.log(dirReduc(["NORTH", "WEST", "SOUTH", "EAST"])) //["NORTH", "WEST", "SOUTH", "EAST"]
 // console.log(dirReduc(["NORTH", "SOUTH", "EAST", "WEST", "EAST", "WEST"])) //[]
+
+//--------------------------------------------------------------
+
+// This time we want to write calculations using functions and get the results. Let's have a look at some examples:
+// seven(times(five())); // must return 35
+// four(plus(nine())); // must return 13
+// Requirements:
+// There must be a function for each number from 0 ("zero") to 9 ("nine")
+// There must be a function for each of the following mathematical operations: plus, minus, times, dividedBy
+// Each calculation consist of exactly one operation and two numbers
+// The most outer function represents the left operand, the most inner function represents the right operand
+// Division should be integer division. For example, this should return 2, not 2.666666
+// function zero(operation) {return operation ? operation(0) : 0;}
+// function one(operation) { return operation ? operation(1) : 1;}
+// function two(operation) { return operation ? operation(2) : 2;}
+// function three(operation) {return operation ? operation(3) : 3;}
+// function four(operation) {return operation ? operation(4) : 4;}
+// function five(operation) {return operation ? operation(5) : 5;}
+// function six(operation) {return operation ? operation(6) : 6;}
+// function seven(operation) {return operation ? operation(7) : 7;}
+// function eight(operation) {return operation ? operation(8) : 8;}
+// function nine(operation) {return operation ? operation(9) : 9;}
+
+// function plus(number) {return function(operation) {return number + operation;}}
+// function minus(number) {return function (operation) {return operation - number;}}
+// function times(number) {return function(operation) {return number * operation;}}
+// function dividedBy(number) {return function(operation) {return Math.floor(operation / number);}}
+
+// console.log(seven(times(five ()))) //35
+// console.log(four (plus(nine ()))) //13
+// console.log(eight(minus(three()))) //5
+// console.log(six(dividedBy(two  ()))) //3
+
+//--------------------------------------------------------------
+// ROT13 is a simple letter substitution cipher that replaces a letter with the letter 13 letters after it in the alphabet. ROT13 is an example of the Caesar cipher. Create a function that takes a string and returns the string ciphered with Rot13. If there are numbers or special characters included in the string, they should be returned as they are. Only letters from the latin/english alphabet should be shifted, like in the original Rot13 "implementation".
+// function rot13(message){
+//   const messageClone = message;
+//   const getCorrectChar = (minCode, maxCode, charCode) => {
+//     if (charCode + 13 > maxCode) {
+//       return String.fromCharCode(minCode + (13 - (maxCode - charCode)));
+//     } else {
+//       return String.fromCharCode(charCode + 13);
+//     }
+//   }
+
+//   return messageClone.split('')
+//                       .map((char) => {
+//                         if ((char.charCodeAt() > 64 && char.charCodeAt() <= 90)) {
+//                           return getCorrectChar(64, 90, char.charCodeAt());
+//                         } else if ((char.charCodeAt() > 96 && char.charCodeAt() < 123)) {
+//                           return getCorrectChar(96, 122, char.charCodeAt());
+//                         } else {
+//                           return char;
+//                         }
+//                       })
+//                       .join('')
+// }
+
+// console.log(rot13('test')) //'grfg'
+// console.log(rot13('abcdefghijklmnopqrstuvwxyz')) //'nopqrstuvwxyzabcdefghijklm'
