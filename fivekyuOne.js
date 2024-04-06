@@ -149,6 +149,7 @@
 // console.log(six(dividedBy(two  ()))) //3
 
 //--------------------------------------------------------------
+
 // ROT13 is a simple letter substitution cipher that replaces a letter with the letter 13 letters after it in the alphabet. ROT13 is an example of the Caesar cipher. Create a function that takes a string and returns the string ciphered with Rot13. If there are numbers or special characters included in the string, they should be returned as they are. Only letters from the latin/english alphabet should be shifted, like in the original Rot13 "implementation".
 // function rot13(message){
 //   const messageClone = message;
@@ -175,3 +176,153 @@
 
 // console.log(rot13('test')) //'grfg'
 // console.log(rot13('abcdefghijklmnopqrstuvwxyz')) //'nopqrstuvwxyzabcdefghijklm'
+
+//--------------------------------------------------------------
+
+// The marketing team is spending way too much time typing in hashtags. Let's help them with our own Hashtag Generator! Here's the deal:
+// It must start with a hashtag (#).
+// All words must have their first letter capitalized.
+// If the final result is longer than 140 chars it must return false.
+// If the input or the result is an empty string it must return false.
+// function generateHashtag (str) {
+//   const newStr = str.split(' ')
+//                     .map((word) => {
+//                       if (word) {
+//                         return word.slice(0, 1).toUpperCase() + word.slice(1)
+//                       }
+//                     })
+//                     .join('')
+
+//   if (newStr.length <= 0 || newStr.length >= 140) {
+//     return false
+//   } else {return `#${newStr}`}
+// }
+
+// console.log(generateHashtag("")) //false
+// console.log(generateHashtag("      ")) //false
+// console.log(generateHashtag("Do We have A Hashtag")) //"#DoWeHaveAHashtag"
+// console.log(generateHashtag("Codewars")) //"#Codewars"
+// console.log(generateHashtag("Codewars Is Nice")) //"#CodewarsIsNice"
+// console.log(generateHashtag("Codewars is nice")) //"#CodewarsIsNice"
+// console.log(generateHashtag("code" + " ".repeat(140) + "wars")) //"#CodeWars"
+// console.log(generateHashtag("Looooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooong Cat")) //false
+// console.log(generateHashtag("a".repeat(139))) //"#A" + "a".repeat(138)
+// console.log(generateHashtag("a".repeat(140))) //false
+
+//--------------------------------------------------------------
+
+// The maximum sum subarray problem consists in finding the maximum sum of a contiguous subsequence in an array or list of integers. Easy case is when the list is made up of only positive numbers and the maximum sum is the sum of the whole array. If the list is made up of only negative numbers, return 0 instead. Empty list is considered to have zero greatest sum. Note that the empty list or array is also a valid sublist/subarray.
+// const maxSequence = function(arr){
+//   let maxSum = 0;
+//   let currentSum = 0;
+
+//   for (let num of arr) {
+//     currentSum = Math.max(0, currentSum + num);
+//     maxSum = Math.max(maxSum, currentSum);
+//   }
+
+//   return maxSum;
+// }
+
+// console.log(maxSequence([])) //0
+// console.log(maxSequence([-2, -3, 1, -3, 4, -1, 2, 1, -5, 4])) //6
+// console.log(maxSequence([-2, -3, 1, -3, 4, -1, 2, 1, -5, 4, 11, -1])) //16
+
+//--------------------------------------------------------------
+
+// Pete likes to bake some cakes. He has some recipes and ingredients. Unfortunately he is not good in maths. Can you help him to find out, how many cakes he could bake considering his recipes? Write a function cakes(), which takes the recipe (object) and the available ingredients (also an object) and returns the maximum number of cakes Pete can bake (integer). For simplicity there are no units for the amounts (e.g. 1 lb of flour or 200 g of sugar are simply 1 or 200). Ingredients that are not present in the objects, can be considered as 0.
+// function cakes(recipe, available) {
+//   let countCakes = Infinity;
+
+//   for (let ingredient in recipe) {
+//     if (ingredient in available) {
+//       countCakes = Math.min(countCakes, Math.floor(available[ingredient] / recipe[ingredient]))
+//     } else {return 0}
+//   }
+
+//   return countCakes
+// }
+
+// console.log(cakes({flour: 500, sugar: 200, eggs: 1}, {flour: 1200, sugar: 1200, eggs: 5, milk: 200})) //2
+// console.log(cakes({apples: 3, flour: 300, sugar: 150, milk: 100, oil: 100}, {sugar: 500, flour: 2000, milk: 2000})) //0
+
+//--------------------------------------------------------------
+
+// The Fibonacci numbers are the numbers in the following integer sequence (Fn): 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, ...
+// such as F(n) = F(n-1) + F(n-2) with F(0) = 0 and F(1) = 1.
+// Given a number, say prod (for product), we search two Fibonacci numbers F(n) and F(n+1) verifying
+// F(n) * F(n+1) = prod.
+// Your function productFib takes an integer (prod) and returns an array:
+// [F(n), F(n+1), true] or {F(n), F(n+1), 1} or (F(n), F(n+1), True)
+// depending on the language if F(n) * F(n+1) = prod.
+// If you don't find two consecutive F(n) verifying F(n) * F(n+1) = prodyou will return
+// [F(n), F(n+1), false] or {F(n), F(n+1), 0} or (F(n), F(n+1), False)
+// F(n) being the smallest one such as F(n) * F(n+1) > prod.
+// function productFib(prod){
+  // let [a, b] = [0, 1];
+
+  // while (a * b < prod) {
+    // [a, b] = [b, a + b];
+  // }
+
+  // return [a, b, a * b === prod];
+// }
+
+// console.log(productFib(4895)) //[55, 89, true]
+// console.log(productFib(5895)) //[89, 144, false]
+// console.log(productFib(74049690)) //[6765, 10946, true]
+// console.log(productFib(84049690)) //[10946, 17711, false]
+// console.log(productFib(193864606)) //[10946, 17711, true]
+// console.log(productFib(447577)) //[610, 987, false]
+// console.log(productFib(602070)) //[610, 987, true]
+
+//--------------------------------------------------------------
+
+// Write a function named first_non_repeating_letter† that takes a string input, and returns the first character that is not repeated anywhere in the string. For example, if given the input 'stress', the function should return 't', since the letter t only occurs once in the string, and occurs first in the string. As an added challenge, upper- and lowercase letters are considered the same character, but the function should return the correct case for the initial letter. For example, the input 'sTreSS' should return 'T'. If a string contains all repeating characters, it should return an empty string (""); † Note: the function is called firstNonRepeatingLetter for historical reasons, but your function should handle any Unicode character.
+// function firstNonRepeatingLetter(s) {
+//   if (!s) {
+//     return '';
+//   }
+
+//   const lowerS = s.toLowerCase();
+//   for (let char of lowerS) {
+//     if (lowerS.indexOf(char) === lowerS.lastIndexOf(char)) {
+//       return s[lowerS.indexOf(char)]
+//     }
+//   }
+
+//   return ''
+// }
+
+// console.log(firstNonRepeatingLetter('a')) //'a'
+// console.log(firstNonRepeatingLetter('stress')) //'t'
+// console.log(firstNonRepeatingLetter('sTreSS')) //'T'
+// console.log(firstNonRepeatingLetter('moonmen')) //'e'
+// console.log(firstNonRepeatingLetter('aa')) //'e'
+
+//--------------------------------------------------------------
+
+// My friend John and I are members of the "Fat to Fit Club (FFC)". John is worried because each month a list with the weights of members is published and each month he is the last on the list which means he is the heaviest. I am the one who establishes the list so I told him: "Don't worry any more, I will modify the order of the list". It was decided to attribute a "weight" to numbers. The weight of a number will be from now on the sum of its digits. For example 99 will have "weight" 18, 100 will have "weight" 1 so in the list 100 will come before 99. Given a string with the weights of FFC members in normal order can you give this string ordered by "weights" of these numbers?
+// function orderWeight(strng) {
+//   const weightNumbers = {}
+//   const newString = strng.trim().split(' ');
+//   newString.forEach((number) =>{
+//     let weight = number.split('').reduce((sum, item) => sum + Number(item), 0)
+//     weightNumbers[number] = weight
+//   })
+
+//   return newString.sort((a, b) => {
+//     const weightDiff = weightNumbers[a] - weightNumbers[b];
+
+//     if (weightDiff !== 0) {
+//       return weightDiff;
+//     } else {
+//       return a.localeCompare(b);
+//     }
+//   }).join(' ')
+// }
+
+// console.log(orderWeight("103 123 4444 99 2000")) //"2000 103 123 4444 99"
+// console.log(orderWeight("2000 10003 1234000 44444444 9999 11 11 22 123")) //"11 11 2000 10003 22 123 1234000 44444444 9999"
+
+//--------------------------------------------------------------
