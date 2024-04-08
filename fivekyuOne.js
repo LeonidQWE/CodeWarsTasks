@@ -326,3 +326,15 @@
 // console.log(orderWeight("2000 10003 1234000 44444444 9999 11 11 22 123")) //"11 11 2000 10003 22 123 1234000 44444444 9999"
 
 //--------------------------------------------------------------
+
+// Write a function that when given a URL as a string, parses out just the domain name and returns it as a string.
+// function domainName(url){
+//   return url.match(/(?:http[s]?:\/\/)?(?:www\.)?([^\.]+)/)[1];
+// }
+
+// console.log(domainName("http://google.com")) //"google"
+// console.log(domainName("http://google.co.jp")) //"google"
+// console.log(domainName("www.xakep.ru")) //"xakep"
+// console.log(domainName("https://youtube.com")) //"youtube"
+
+
