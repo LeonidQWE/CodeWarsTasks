@@ -337,4 +337,31 @@
 // console.log(domainName("www.xakep.ru")) //"xakep"
 // console.log(domainName("https://youtube.com")) //"youtube"
 
+//--------------------------------------------------------------
+
+// Your job is to write a function which increments a string, to create a new string.
+// If the string already ends with a number, the number should be incremented by 1.
+// If the string does not end with a number. the number 1 should be appended to the new string.
+// function incrementString (strng) {
+//   const matches = strng.match(/(.*?)(\d*)$/);
+//   const text = matches[1];
+//   const numberSts = matches[2];
+
+//   if (numberSts === '') {
+//     return text + '1';
+//   } else {
+//     const number = Number(numberSts) + 1;
+//     return text + number.toString().padStart(numberSts.length, '0')
+//   }
+// }
+
+// console.log(incrementString("foobar000")) //"foobar001"
+// console.log(incrementString("foobar999")) //"foobar1000"
+// console.log(incrementString("foobar00999")) //"foobar01000"
+// console.log(incrementString("foo")) //"foo1"
+// console.log(incrementString("foobar001")) //"foobar002"
+// console.log(incrementString("foobar1")) //"foobar2"
+// console.log(incrementString("1")) //"2"
+// console.log(incrementString("009")) //"010"
+// console.log(incrementString("fo99obar99")) //"fo99obar100"
 
