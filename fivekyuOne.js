@@ -365,3 +365,83 @@
 // console.log(incrementString("009")) //"010"
 // console.log(incrementString("fo99obar99")) //"fo99obar100"
 
+//--------------------------------------------------------------
+
+// Complete the function scramble(str1, str2) that returns true if a portion of str1 characters can be rearranged to match str2, otherwise returns false.
+// function scramble(str1, str2) {
+//   let str1Clone = str1
+//   for (let i = 0; i < str2.length; i++) {
+//     if (str1Clone.indexOf(str2[i]) >= 0) {
+//       str1Clone = str1Clone.replace(str2[i], '')
+//     } else {
+//       return false
+//     }
+//   }
+//   return true
+
+//   //Better
+//   // const charCount = {};
+
+//   // for (let i = 0; i < str1.length; i++) {
+//   //   charCount[str1[i]] = (charCount[str1[i]] || 0) + 1;
+//   // }
+
+//   // for (let j = 0; j < str2.length; j++) {
+//   //   const char = str2[j];
+//   //   if (!charCount[char]) {
+//   //     return false;
+//   //   }
+//   //   charCount[char]--;
+//   // }
+
+//   // return true;
+// }
+
+// console.log(scramble('rkqodlw', 'world')) //true
+// console.log(scramble('cedewaraaossoqqyt', 'codewars')) //true
+// console.log(scramble('katas', 'steak')) //false
+// console.log(scramble('scriptjavx', 'javascript')) //false
+// console.log(scramble('scriptingjava', 'javascript')) //true
+// console.log(scramble('scriptsjava', 'javascripts')) //true
+// console.log(scramble('javscripts', 'javascript')) //false
+// console.log(scramble('jscripts', 'javascript')) //false
+// console.log(scramble('aabbcamaomsccdd', 'commas')) //true
+// console.log(scramble('commas', 'commas')) //true
+// console.log(scramble('sammoc', 'commas')) //true
+
+//--------------------------------------------------------------
+
+// Greed is a dice game played with five six-sided dice. Your mission, should you choose to accept it, is to score a throw according to these rules. You will always be given an array with five six-sided dice values.
+// Three 1's => 1000 points,  Three 6's =>  600 points,  Three 5's =>  500 points,  Three 4's =>  400 points,  Three 3's =>  300 points,  Three 2's =>  200 points,  One   1   =>  100 points,  One   5   =>   50 point
+// A single die can only be counted once in each roll. For example, a given "5" can only count as part of a triplet (contributing to the 500 points) or as a single 50 points, but not both in the same roll.
+// function score( dice ) {
+  // const counts = new Array(7).fill(0);
+  // const points = [0, 100, 200, 300, 400, 500, 600];
+  // let score = 0;
+
+  // dice.forEach((die) => {
+    // counts[die]++;
+  // });
+
+  // for (let i = 1; i <= 6; i++) {
+    // if (counts[i] >= 3) {
+      // if (i === 1) {
+        // score += 1000;
+      // } else {
+        // score += points[i];
+      // }
+      // counts[i] -= 3;
+    // }
+  // }
+
+  // score += counts[1] * 100 + counts[5] * 50;
+
+  // return score;
+// }
+
+// console.log(score([2, 3, 4, 6, 2])) //0
+// console.log(score([4, 4, 4, 3, 3])) //400
+// console.log(score([2, 4, 4, 5, 4])) //450
+// console.log(score([3, 3, 3, 3, 3])) //300
+// console.log(score([1, 1, 1, 1, 3])) //1100
+
