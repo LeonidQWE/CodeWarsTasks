@@ -445,3 +445,19 @@
 // console.log(score([3, 3, 3, 3, 3])) //300
 // console.log(score([1, 1, 1, 1, 3])) //1100
 
+//--------------------------------------------------------------
+
+// Write a program that will calculate the number of trailing zeros in a factorial of a given number.
+// function zeros (n) {
+//   let counter = 0;
+//   for (let i = 5; n/i >= 1; i *= 5) {
+//     counter += Math.floor(n/i);
+//   }
+//   return counter;
+// }
+
+// console.log(zeros(0)) //0
+// console.log(zeros(5)) //1
+// console.log(zeros(6)) //1
+// console.log(zeros(30)) //7
+// console.log(zeros(1000)) //249
