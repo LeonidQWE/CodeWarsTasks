@@ -461,3 +461,75 @@
 // console.log(zeros(6)) //1
 // console.log(zeros(30)) //7
 // console.log(zeros(1000)) //249
+
+//--------------------------------------------------------------
+
+// The drawing shows 6 squares the sides of which have a length of 1, 1, 2, 3, 5, 8. It's easy to see that the sum of the perimeters of these squares is : 4 * (1 + 1 + 2 + 3 + 5 + 8) = 4 * 20 = 80
+//The function perimeter has for parameter n where n + 1 is the number of squares (they are numbered from 0 to n) and returns the total perimeter of all the squares.
+
+// function perimeter(n) {
+//   const fibonachi = [0, 1];
+//   for (let i = 0; i < n; i ++) {
+//     let firsNumber = fibonachi[fibonachi.length - 2] || 0;
+//     let secondNumber = fibonachi[fibonachi.length - 1];
+
+//     fibonachi.push(firsNumber + secondNumber);
+//   }
+
+//   return fibonachi.reduce((sum, number) => sum + number, 0) * 4;
+// }
+
+// console.log(perimeter(0)) //4
+// console.log(perimeter(5)) //80
+// console.log(perimeter(7)) //216
+// console.log(perimeter(20)) //114624
+// console.log(perimeter(30)) //14098308
+
+//--------------------------------------------------------------
+
+// Given a positive number n > 1 find the prime factor decomposition of n. The result will be a string with the following form :
+//  "(p1**n1)(p2**n2)...(pk**nk)"
+// with the p(i) in increasing order and n(i) empty if n(i) is 1.
+// function primeFactors(n){
+//   const factors = [];
+//   const result = [];
+//   const countOfFactors = {}
+//   let i = 2;
+
+//   while (i * i <= n) {
+//     if (n % i) {
+//       i++;
+//     } else {
+//       n = Math.floor(n / i);
+//       factors.push(i)
+//     }
+//   }
+
+//   if (n > 1) {
+//     factors.push(n)
+//   }
+
+//   for (let factor of factors) {
+//     if (factor in countOfFactors) {
+//       countOfFactors[factor]++;
+//     } else {
+//       countOfFactors[factor] = 1;
+//     }
+//   }
+
+//   for (let key in countOfFactors) {
+//     if (countOfFactors[key] === 1) {
+//       result.push(`(${key})`)
+//     } else {
+//       result.push(`(${key}**${countOfFactors[key]})`)
+//     }
+//   }
+
+//   return result.join('')
+// }
+
+// console.log(primeFactors(86240)) //"(2**5)(5)(7**2)(11)"
+// console.log(primeFactors(7775460)) //"(2**2)(3**3)(5)(7)(11**2)(17)"
+
+//--------------------------------------------------------------
+
