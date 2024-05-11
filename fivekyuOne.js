@@ -533,3 +533,65 @@
 
 //--------------------------------------------------------------
 
+// For this exercise you will be strengthening your page-fu mastery. You will complete the PaginationHelper class, which is a utility class helpful for querying paging information related to an array.
+// The class is designed to take in an array of values and an integer indicating how many items will be allowed per each page. The types of values contained within the collection/array are not relevant.
+// class PaginationHelper {
+//   constructor (collection, itemsPerPage) {
+//     this.collection = collection;
+//     this.itemsPerPage = itemsPerPage;
+//     this.countItems = this.collection.length;
+//     this.countPages = Math.ceil(this.countItems / this.itemsPerPage);
+//   }
+
+//   itemCount () {
+//     return this.countItems;
+//   }
+
+//   pageCount () {
+//     return this.countPages;
+//   }
+
+//   pageItemCount (pageIndex) {
+//     if (pageIndex >= this.countPages || pageIndex < 0) {
+//       return -1;
+//     }
+
+//     const startIndex = pageIndex * this.itemsPerPage;
+//     const endIndex = startIndex + this.itemsPerPage;
+//     return endIndex > this.countItems ? this.countItems - startIndex : this.itemsPerPage;
+//   }
+
+//   pageIndex (itemIndex) {
+//     if (itemIndex < 0 || itemIndex >= this.countItems) {
+//       return -1;
+//     }
+
+//     return Math.floor(itemIndex / this.itemsPerPage)
+//   }
+// }
+
+// const collection = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24]
+// const helper = new PaginationHelper(collection, 10)
+
+// console.log(helper.pageCount()) //3
+// console.log(helper.itemCount()) //24
+// console.log(helper.pageItemCount(0)) //10
+// console.log(helper.pageItemCount(1)) //10
+// console.log(helper.pageItemCount(2)) //4
+// console.log(helper.pageItemCount(3)) //-1
+// console.log(helper.pageIndex(40)) //-1
+// console.log(helper.pageIndex(22)) //2
+// console.log(helper.pageIndex(3)) //0
+// console.log(helper.pageIndex(0)) //0
+// console.log(helper.pageIndex(-1)) //-1
+// console.log(helper.pageIndex(-23)) //-1
+// console.log(helper.pageIndex(-15)) //-1
+
+// const empty = new PaginationHelper([], 10);
+// console.log(empty.pageCount()) //0
+// console.log(empty.itemCount()) //0
+// console.log(empty.pageItemCount(0)) //-1
+// console.log(empty.pageIndex(0)) //-1
+
+//--------------------------------------------------------------
+
