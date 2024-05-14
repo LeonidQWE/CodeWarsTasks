@@ -595,3 +595,67 @@
 
 //--------------------------------------------------------------
 
+// In this kata, you will write a function that returns the positions and the values of the "peaks" (or local maxima) of a numeric array. For example, the array arr = [0, 1, 2, 5, 1, 0] has a peak at position 3 with a value of 5 (since arr[3] equals 5). The output will be returned as an object with two properties: pos and peaks. Both of these properties should be arrays. If there is no peak in the given array, then the output should be {pos: [], peaks: []}. Also, beware of plateaus !!! [1, 2, 2, 2, 1] has a peak while [1, 2, 2, 2, 3] and [1, 2, 2, 2, 2] do not. In case of a plateau-peak, please only return the position and value of the beginning of the plateau. For example: pickPeaks([1, 2, 2, 2, 1]) returns {pos: [1], peaks: [2]} (or equivalent in other languages)
+// function pickPeaks(arr){
+//   const pos = [];
+//   const peaks = [];
+
+//   let plateauStart = -1;
+
+
+  // for (let i = 1; i <= arr.length - 1; i++) {
+  //   if (arr[i] > arr[i - 1]) {
+  //     plateauStart = i;
+  // } else if (arr[i] < arr[i - 1] && plateauStart !== -1) {
+  //     pos.push(plateauStart);
+  //     peaks.push(arr[plateauStart]);
+  //     plateauStart = -1;
+  //   }
+  // }
+
+//   return {
+//     pos,
+//     peaks,
+//   };
+// }
+
+// console.log(pickPeaks([1,2,3,6,4,1,2,3,2,1])) //{pos:[3,7], peaks:[6,3]}
+// console.log(pickPeaks([3,2,3,6,4,1,2,3,2,1,2,3])) //{pos:[3,7], peaks:[6,3]}
+// console.log(pickPeaks([3,2,3,6,4,1,2,3,2,1,2,2,2,1])) //{pos:[3,7,10], peaks:[6,3,2]}
+// console.log(pickPeaks([2,1,3,1,2,2,2,2,1])) //{pos:[2,4], peaks:[3,2]}
+// console.log(pickPeaks([2,1,3,1,2,2,2,2])) //{pos:[2], peaks:[3]}
+// console.log(pickPeaks([2,1,3,2,2,2,2,5,6])) //{pos:[2], peaks:[3]}
+// console.log(pickPeaks([2,1,3,2,2,2,2,1])) //{pos:[2], peaks:[3]}
+// console.log(pickPeaks([1,2,5,4,3,2,3,6,4,1,2,3,3,4,5,3,2,1,2,3,5,5,4,3])) //{pos:[2,7,14,20], peaks:[5,6,5,5]}
+// console.log(pickPeaks([])) //{pos:[],peaks:[]}
+// console.log(pickPeaks([1,1,1,1])) //{pos:[],peaks:[]}
+
+//--------------------------------------------------------------
+
+// Given a list of integers and a single sum value, return the first two values (parse from the left please) in order of appearance that add up to form the sum. If there are two or more pairs with the required sum, the pair whose second element has the smallest index is the solution. Negative numbers and duplicate numbers can and will appear.
+// function sumPairs(ints, s) {
+//   const seen = {};
+
+//   for (let i = 0; i < ints.length; i++) {
+//     const complement = s - ints[i];
+
+//     if (seen[complement] !== undefined) {
+//       return [ints[seen[complement]], ints[i]];
+//     }
+//     seen[ints[i]] = i;
+//   }
+
+//   return undefined;
+// }
+
+// console.log(sumPairs([1, 4, 8, 7, 3, 15], 8)) //[1, 7]
+// console.log(sumPairs([1, -2, 3, 0, -6, 1], -6)) //[0, -6]
+// console.log(sumPairs([20, -13, 40], -7)) //undefined
+// console.log(sumPairs([1, 2, 3, 4, 1, 0], 2)) //[1, 1]
+// console.log(sumPairs([10, 5, 2, 3, 7, 5], 10)) //[3, 7]
+// console.log(sumPairs([4, -2, 3, 3, 4], 8)) //[4, 4]
+// console.log(sumPairs([0, 2, 0], 0)) //[0, 0]
+// console.log(sumPairs([5, 9, 13, -3], 10)) //[13, -3]
+
+//--------------------------------------------------------------
+
